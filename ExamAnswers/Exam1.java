@@ -6,20 +6,20 @@ import java.util.Random;
 
 public class Exam1 {
 	public static void main(String[] args) throws ParseException {
-		Account ca = new CurrentAccount(“C12345”, 1000, 25000);
-		SimpleDateFormat sdf = new SimpleDateFormat(“dd-MM-yyyy”);
-		Customer c1 = new Customer(“Alka”, sdf.parse(“19-07-2004”), “A34567”, ca);
+		Account ca = new CurrentAccount("C12345", 1000, 25000);
+		SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+		Customer c1 = new Customer("Alka", sdf.parse("19-07-2004"), "A34567", ca);
 
-		SavingsAccount sa = new SavingsAccount(“C7890”, 500, 4.5f);
-		Customer c2 = new Customer(“Ankit”, sdf.parse(“27-08-2003”), “A8901”, sa);
+		SavingsAccount sa = new SavingsAccount("C7890", 500, 4.5f);
+		Customer c2 = new Customer("Ankit", sdf.parse("27-08-2003"), "A8901", sa);
 		sa.deposit(5000);
 		sa.printTransactions();
-		System.out.println(“Balance of Savings account: “ + sa.getBalance());
+		System.out.println("Balance of Savings account: " + sa.getBalance());
 		sa.withdraw(300);
 		sa.printTransactions();
-		System.out.println(“Balance of Savings account: “ + sa.getBalance());
+		System.out.println("Balance of Savings account: " + sa.getBalance());
 		double closingBalance = sa.getBalance() + sa.endOfDayInterest();
-		System.out.println(“End of day balance of Savings account: “ + closingBalance);
+		System.out.println("End of day balance of Savings account: " + closingBalance);
 	}
 }
 
@@ -123,12 +123,12 @@ class Transaction {
 	private Date date;
 	private String type;
 	private double amount;
-	public static final String DEBIT = “debit”;
-	public static final String CREDIT = “credit”;
+	public static final String DEBIT = "debit";
+	public static final String CREDIT = "credit";
 
 	Transaction(String type, double amount) {
 		Random r = new Random();
-		this.transactionId = “T” + r.nextInt();
+		this.transactionId = "T" + r.nextInt();
 		this.date = new Date();
 		this.type = type;
 		this.amount = amount;
@@ -136,10 +136,10 @@ class Transaction {
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder(“Transaction id: “ + transactionId);
-		sb.append(“Date: “ + date);
-		sb.append(“Type: “ + type);
-		sb.append(“Amount: “ + amount);
+		StringBuilder sb = new StringBuilder("Transaction id: " + transactionId);
+		sb.append("Date: " + date);
+		sb.append("Type: " + type);
+		sb.append("Amount: " + amount);
 		return sb.toString();
 	}
 } 
