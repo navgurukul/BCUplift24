@@ -1,0 +1,105 @@
+
+1. What is the purpose of the Java Garbage Collector?
+   a) To allocate memory for objects
+   b) To release memory occupied by unused objects
+   c) To optimize code execution
+   d) To manage database connections
+
+
+ans1- to release memory occupied by unused objects.
+
+2. Which part of the Java Virtual Machine (JVM) is responsible for garbage collection?
+   a) Class Loader
+   b) JVM Compiler
+   c) Runtime Data Area
+   d) Bytecode Verifier
+
+ans2- Runtime Data Area
+
+3. How does the Garbage Collector determine if an object is eligible for garbage collection?
+   a) By checking if the object is reachable
+   b) By examining the object's reference count
+   c) By the size of the object
+   d) By the object's creation time
+
+ans3-By checking if the object is reachable
+
+4. Which of the following are Java Garbage Collection algorithms?
+   a) Stack-based algorithm
+   b) Mark-and-Sweep
+   c) Bubble Sort
+   d) Depth-First Search
+ans-b) Mark-and-Sweep
+
+5. In Java, which part of the memory is managed by the Garbage Collector?
+   a) Stack
+   b) Heap
+   c) Cache
+   d) Register
+ans-b) Heap
+
+6. Which of the following is not a generation in the generational garbage collection model?
+   a) Young Generation
+   b) Old Generation
+   c) Infant Generation
+   d) Permanent Generation
+
+ans-c) Infant Generation
+
+7. What is a "stop-the-world" event in the context of Garbage Collection?
+   a) A situation where the Garbage Collector runs concurrently with the application
+   b) A situation where the application is paused while Garbage Collection is performed
+   c) A situation where an object is pinned in memory
+   d) A situation where Garbage Collection never occurs
+
+ans- b) A situation where the application is paused while Garbage Collection is performed
+
+8. What is the purpose of the "System.gc()" method in Java?
+   a) To explicitly trigger garbage collection
+   b) To increase memory allocation for the JVM
+   c) To reduce the memory footprint of an application
+   d) To start a new JVM instance
+
+ans-a) To explicitly trigger garbage collection
+
+9. Which garbage collection algorithm is typically used for the Young Generation in the JVM?
+   a) Mark-and-Sweep
+   b) Generational Garbage Collection
+   c) Parallel Garbage Collection
+   d) Concurrent Garbage Collection
+
+ans= c) Parallel Garbage Collection
+
+10. In the context of Garbage Collection, what is the PermGen (Permanent Generation) used for?
+    a) Storing live objects
+    b) Storing the heap
+    c) Storing class metadata, such as classes and methods
+    d) Managing thread pools
+
+ans- c) Storing class metadata, such as classes and methods
+
+
+Subjective Questions:
+
+11. Why Garbage Collection is necessary in Java?
+ans- Garbage collector necessary in Java because Garbage collector give space to the new objects by removing the all the objects which are not in use.
+its hold the space for the new one by removing the unused one. 
+
+12. What is the drawback to Garbage Collection?
+It's take lots of process to remove the objects,
+never utilized the resources fully, it delete the unused one to released the space.
+
+13. What do you mean by mark-and-sweep?
+ans mark and sweep are the process of garbage collector by which the released the space for the new objects. In marking the objects get marked which are not in used.
+and in sweeping its sweep the objects which are not in used. basically its means deleting the objects.
+
+ 
+14. What is the difference between Heap and Stack in Java?
+ans- Stack means last in first out here it store the local variables .it remove the variable after in the use, it is faster the heap, 
+data area well organised.
+
+Heap- first in first out. here all the methods and instance variables objects are store in the heap memory. its is very complex not well data are not organised.
+slower than stack.
+
+15. Write a Stack Program.
+
