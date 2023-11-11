@@ -1,0 +1,195 @@
+
+1. What is the purpose of the Java Garbage Collector?
+   a) To allocate memory for objects
+   b) To release memory occupied by unused objects
+   c) To optimize code execution
+   d) To manage database connections
+
+Ans = b
+
+2. Which part of the Java Virtual Machine (JVM) is responsible for garbage collection?
+   a) Class Loader
+   b) JVM Compiler
+   c) Runtime Data Area
+   d) Bytecode Verifier
+
+Ans = c
+
+3. How does the Garbage Collector determine if an object is eligible for garbage collection?
+   a) By checking if the object is reachable
+   b) By examining the object's reference count
+   c) By the size of the object
+   d) By the object's creation time
+
+Ans = a
+
+4. Which of the following are Java Garbage Collection algorithms?
+   a) Stack-based algorithm
+   b) Mark-and-Sweep
+   c) Bubble Sort
+   d) Depth-First Search
+
+Ans = b
+
+5. In Java, which part of the memory is managed by the Garbage Collector?
+   a) Stack
+   b) Heap
+   c) Cache
+   d) Register
+
+Ans = b
+
+6. Which of the following is not a generation in the generational garbage collection model?
+   a) Young Generation
+   b) Old Generation
+   c) Infant Generation
+   d) Permanent Generation
+
+Ans = c
+
+7. What is a "stop-the-world" event in the context of Garbage Collection?
+   a) A situation where the Garbage Collector runs concurrently with the application
+   b) A situation where the application is paused while Garbage Collection is performed
+   c) A situation where an object is pinned in memory
+   d) A situation where Garbage Collection never occurs
+
+Ans = b
+
+8. What is the purpose of the "System.gc()" method in Java?
+   a) To explicitly trigger garbage collection
+   b) To increase memory allocation for the JVM
+   c) To reduce the memory footprint of an application
+   d) To start a new JVM instance
+
+Ans = a
+
+9. Which garbage collection algorithm is typically used for the Young Generation in the JVM?
+   a) Mark-and-Sweep
+   b) Generational Garbage Collection
+   c) Parallel Garbage Collection
+   d) Concurrent Garbage Collection
+
+Ans = b
+
+10. In the context of Garbage Collection, what is the PermGen (Permanent Generation) used for?
+    a) Storing live objects
+    b) Storing the heap
+    c) Storing class metadata, such as classes and methods
+    d) Managing thread pools
+
+
+Ans = c
+
+Subjective Questions:
+
+11. Why Garbage Collection is necessary in Java?
+
+Answer = Beacause it destroy the unused reference and varible.
+
+
+
+12. What is the drawback to Garbage Collection?
+
+Answer = 
+
+Drawback Of Garbage Collector: = 1) Sometime the memory is leaked.
+                                 2) Sometime it perform overheded.
+
+
+
+13. What do you mean by mark-and-sweep?
+
+Answer = 
+
+The mark and sweep is the java Garbage collector Algorithm. There are 3 generation first is Young Generation,second is Old Generation and Third is Permanent Generation.
+In Young Generation There are two task first is eden and second is Servivor and it contain two part s0 and s1. After allocating Variables in eden, the mark and sweep algorithm will check which
+variable is reachable. It mark those variable who are reachable to servivor. After marking it sweep that variable into servivor. This is the main work of mark-and-Sweep Algorithm.
+
+
+14. What is the difference between Heap and Stack in Java?
+
+Answer :-  
+
+Stack = 1) It store the local variable and Partial Result.
+        2) It's size is Fixed and relatively Small.
+        3) It has slower access of variable.
+        4) It has LifeSpan Low lifeSpan of variable.
+
+Heap = 1) It Store the reference of object and arrays.
+       2) It's size is not fix and it comperatively larger in size.
+       3) It has Larger access of variable.
+       4) It has Large LifeSpan of variable.
+     
+15. Write a Stack Program.
+Answer : - 
+
+class Stack{
+    private int sizeOfArray;
+    private int top;
+    private int[] arry;
+    
+    
+    Stack(int sizeOfArray) {
+        this.sizeOfArray = sizeOfArray;
+        top = -1;
+        arry = new int[sizeOfArray];
+    }
+    
+    
+    public void push(int num) {
+        if (top == (sizeOfArray-1)) {
+            System.out.print("Stack is Overflow");
+        }
+        else {
+            arry[++top] = num;
+        }
+    }
+    
+    
+    public void pop() {
+        if (top == -1) {
+            System.out.println("Stack is Underflow");
+        }
+        else {
+            int d = arry[top--];
+            System.out.println("Pop element is : " + d);
+        }
+    }
+    
+    
+    public void peek() {
+        if (top == -1) {
+            System.out.println("Stack is Empty");
+        }
+        else {
+            System.out.println("Peek element is : " + arry[top]);
+        }
+    }
+    
+    
+    public void display() {
+        System.out.println("Display Elements : ");
+        for (int n : arry) {
+            System.out.print(" "+ n);
+        }
+        System.out.println();
+    }
+}
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		Stack s1 = new Stack(5);
+		s1.push(3);
+		s1.push(4);
+		s1.push(5);
+		s1.push(6);
+		s1.display();
+		s1.pop();
+		s1.peek();
+		
+	}
+}
+
+
