@@ -1,0 +1,167 @@
+
+1. What is the purpose of the Java Garbage Collector?
+   a) To allocate memory for objects
+   b) To release memory occupied by unused objects 
+   c) To optimize code execution
+   d) To manage database connections       
+ANS:-b) To release memory occupied by unused objects 
+
+2. Which part of the Java Virtual Machine (JVM) is responsible for garbage collection?
+   a) Class Loader 
+   b) JVM Compiler
+   c) Runtime Data Area
+   d) Bytecode Verifier
+ANS:- b) JVM Compiler   
+
+3. How does the Garbage Collector determine if an object is eligible for garbage collection?
+   a) By checking if the object is reachable
+   b) By examining the object's reference count
+   c) By the size of the object
+   d) By the object's creation time 
+ANS:-  a) By checking if the object is reachable        
+
+4. Which of the following are Java Garbage Collection algorithms?
+   a) Stack-based algorithm
+   b) Mark-and-Sweep 
+   c) Bubble Sort
+   d) Depth-First Search
+ANS:-  b) Mark-and-Sweep 
+
+5. In Java, which part of the memory is managed by the Garbage Collector?
+   a) Stack
+   b) Heap 
+   c) Cache
+   d) Register
+ANS:-b) Heap
+
+
+6. Which of the following is not a generation in the generational garbage collection model?
+   a) Young Generation
+   b) Old Generation
+   c) Infant Generation 
+   d) Permanent Generation
+
+ANS:- c) Infant Generation
+
+7. What is a "stop-the-world" event in the context of Garbage Collection?
+   a) A situation where the Garbage Collector runs concurrently with the application
+   b) A situation where the application is paused while Garbage Collection is performed (ans)
+   c) A situation where an object is pinned in memory
+   d) A situation where Garbage Collection never occurs
+
+ANS:-b) A situation where the application is paused while Garbage Collection is performed
+
+8. What is the purpose of the "System.gc()" method in Java?
+   a) To explicitly trigger garbage collection 
+   b) To increase memory allocation for the JVM
+   c) To reduce the memory footprint of an application
+   d) To start a new JVM instance
+
+ANS:-a) To explicitly trigger garbage collection
+
+9. Which garbage collection algorithm is typically used for the Young Generation in the JVM?
+   a) Mark-and-Sweep
+   b) Generational Garbage Collection 
+   c) Parallel Garbage Collection
+   d) Concurrent Garbage Collection
+
+ANS:-  b) Generational Garbage Collection 
+
+10. In the context of Garbage Collection, what is the PermGen (Permanent Generation) used for?
+    a) Storing live objects
+    b) Storing the heap
+    c) Storing class metadata, such as classes and methods 
+    d) Managing thread pools
+ANS:- c) Storing class metadata, such as classes and methods
+
+Subjective Questions:
+
+11. Why Garbage Collection is necessary in Java?
+
+ANS:- Garbage Collection is necessary because: In our JVM architechture, there are three sub parts class loader subsystem(Loading,Linking,execution), Runtime data area and initialization. In Runtime data area garbage plays an important role as they allow automatic memory management and it works like a cleaning process that automatically find and removes objects that are no longer needed or in use in program.  In hotspot the marking and compating both the phases are conrolled by Garbage collector.
+                       
+
+
+12. What is the drawback to Garbage Collection?
+ANS:- Garbage coolection is not good for super fast or predictable tasks. 
+      It can be bit tricky to setup. 
+      It can make your program pause while clean up unused memory.
+      It is use extra computer resources
+
+
+13. What do you mean by mark-and-sweep?
+ANS:- It is a java Garbage Collection algorithm. 
+
+
+
+14. What is the difference between Heap and Stack in Java?
+
+ANS:- 1) Defination: Stack is an array od memory and Heap is the area in the memory which is used to store objects.
+      2) Size: Stack is often smallest than heap as use only store temporary data and local varibles and there is no size limit in heap.
+      3) Accessesbility: Stack is more structured and can be only accessed in specific order Last in first out (LIFO) whereas Heap is flexible and can be accsessed anytime that means that it can be use easily.
+      4)Allocation: Data in stack is automatically alloacated and deallocated by JVM as program run but data in heap must be explicitly created and destroyed by programmer using the new keywords by using garbage collections.
+      
+
+
+15. Write a Stack Program.
+ANS:-public class Stack{
+    public static void main(String[] args) {
+        StackUsingArray stack = new StackUsingArray(5);
+
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+
+        while (!stack.isEmpty()) {
+            System.out.print(stack.peek() + " ");
+		break;
+        }
+    }
+}
+
+class StackUsingArray{
+    private int maxSize;
+    private int top;
+    private int[] stackArray;
+
+    public StackUsingArray(int size) {
+        maxSize = size;
+        stackArray = new int[maxSize];
+        top = -1;
+    }
+
+    public void push(int value) {
+        if (top < maxSize - 1) {
+            stackArray[++top] = value;
+        } else {
+            System.out.println("Stack is full. Cannot push " + value);
+        }
+    }
+
+    public int pop() {
+        if (top >= 0) {
+            return stackArray[top--];
+        } else {
+            System.out.println("Stack is empty. Cannot pop.");
+            return -1; // Return -1 to indicate an empty stack.
+        }
+    }
+
+    public int peek() {
+        if (top >= 0) {
+            return stackArray[top];
+        } else {
+            System.out.println("Stack is empty. Cannot peek.");
+            return -1; // Return -1 to indicate an empty stack.
+        }
+    }
+
+    public boolean isEmpty() {
+        return (top == -1);
+    }
+}
+
+
+
