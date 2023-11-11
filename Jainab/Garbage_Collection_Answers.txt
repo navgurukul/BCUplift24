@@ -1,0 +1,157 @@
+
+1. What is the purpose of the Java Garbage Collector?
+   a) To allocate memory for objects
+   b) To release memory occupied by unused objects
+   c) To optimize code execution
+   d) To manage database connections
+
+ANSWER 1:- B
+
+2. Which part of the Java Virtual Machine (JVM) is responsible for garbage collection?
+   a) Class Loader
+   b) JVM Compiler
+   c) Runtime Data Area
+   d) Bytecode Verifier
+
+ANSWER 2:- B
+
+3. How does the Garbage Collector determine if an object is eligible for garbage collection?
+   a) By checking if the object is reachable
+   b) By examining the object's reference count
+   c) By the size of the object
+   d) By the object's creation time
+ANSWER 3:- A
+
+4. Which of the following are Java Garbage Collection algorithms?
+   a) Stack-based algorithm
+   b) Mark-and-Sweep
+   c) Bubble Sort
+   d) Depth-First Search
+
+ANSWER 4:-B
+
+5. In Java, which part of the memory is managed by the Garbage Collector?
+   a) Stack
+   b) Heap
+   c) Cache
+   d) Register
+
+ANSWER 5:- B
+
+6. Which of the following is not a generation in the generational garbage collection model?
+   a) Young Generation
+   b) Old Generation
+   c) Infant Generation
+   d) Permanent Generation
+
+ANSWER 6:- C
+
+7. What is a "stop-the-world" event in the context of Garbage Collection?
+   a) A situation where the Garbage Collector runs concurrently with the application
+   b) A situation where the application is paused while Garbage Collection is performed
+   c) A situation where an object is pinned in memory
+   d) A situation where Garbage Collection never occurs
+
+ANSWER 7:- B
+
+8. What is the purpose of the "System.gc()" method in Java?
+   a) To explicitly trigger garbage collection
+   b) To increase memory allocation for the JVM
+   c) To reduce the memory footprint of an application
+   d) To start a new JVM instance
+
+ANSWER 8:-A
+
+9. Which garbage collection algorithm is typically used for the Young Generation in the JVM?
+   a) Mark-and-Sweep
+   b) Generational Garbage Collection
+   c) Parallel Garbage Collection
+   d) Concurrent Garbage Collection
+
+ANSWER 9:- C
+
+10. In the context of Garbage Collection, what is the PermGen (Permanent Generation) used for?
+    a) Storing live objects
+    b) Storing the heap
+    c) Storing class metadata, such as classes and methods
+    d) Managing thread pools
+
+ANSWER 10:- C
+
+
+Subjective Questions:
+
+11. Why Garbage Collection is necessary in Java?
+
+Answer 11:- Garbage is a kind of cleaning process that automatically find and delete the objects those are not in used in the program.
+ it helps to free up memory space so that our program doesn't use any extra space and memory which is not required.
+ it helps to manage memory related errors in our program. it helps us to be focused on writing program instead of managing memory space.
+
+12. What is the drawback to Garbage Collection?
+
+ANSWER 12:- DrawBacks:
+	1) Garbage Collector pause the program while cleaning the unused memory.
+	2) it uses extra computer resources.
+	3) Garbage collector is little tricky to set up.
+	4) It is not great for Fast and predictable tasks.
+
+13. What do you mean by mark-and-sweep?
+
+ANSWER 13:- Marking Phase: It identifies the reachable objects. as soon as reachable objects are encountered are marked as live.
+	   Sweep Phase: It identifies the unreachable objects. when marking is complete the algorithm goes to entire heap and
+		 deallocated the unreached objects.
+
+14. What is the difference between Heap and Stack in Java?
+ANSWER 14:- Stack:
+		1) Stack has smaller space than heap.
+		2) In Stack we can only store temporary variables and data.
+		3) Stack is more structured and can be accessible in specified order LIFO(Last In First Out).
+
+	   Heap:
+		1) Heap has larger space than stack.
+		2) Heap is not Structed like stack, it is flexible .
+		3) Heap can be accessed anytime.
+
+
+15. Write a Stack Program.
+
+ANSWER 15:-
+import java.util.Array;
+public class StackProgram{
+	public static void main(String [] args){
+		StackArray stack= new StackArray();
+		
+		stack.push(5);
+		stack.push(8);
+		stack.push(11);
+		
+		stack.pop();
+
+		stack.peek()
+		while(!stack.isEmpty()){
+			System.out.println(stack.pop());
+		}
+	}
+}
+class StackArray{
+	public ArrayList<Integer> stack = new ArrayList<>();
+	public void push(int value){
+		stack.add(value);
+
+	}
+	public int pop(){
+		if(!stack.isEmpty()){
+			return stack.remove(stack.size()-1);
+
+		}
+		else{
+			System.out.println("Empty Stack");
+			return -1;
+		}
+	}
+	public boolean isEmpty(){
+		return stack.isEmpty();
+	}
+
+}
+
