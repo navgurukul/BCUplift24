@@ -1,0 +1,132 @@
+
+1. What is the purpose of the Java Garbage Collector?
+   a) To allocate memory for objects
+   b) To release memory occupied by unused objects
+   c) To optimize code execution
+   d) To manage database connections
+
+   Answer : b) To release memory occupied by unused objects
+
+2. Which part of the Java Virtual Machine (JVM) is responsible for garbage collection?
+   a) Class Loader
+   b) JVM Compiler
+   c) Runtime Data Area
+   d) Bytecode Verifier
+
+   Answer : b) JVM Compiler
+
+3. How does the Garbage Collector determine if an object is eligible for garbage collection?
+   a) By checking if the object is reachable
+   b) By examining the object's reference count
+   c) By the size of the object
+   d) By the object's creation time
+
+Answer : a) By checking if the object is reachable
+
+4. Which of the following are Java Garbage Collection algorithms?
+   a) Stack-based algorithm
+   b) Mark-and-Sweep
+   c) Bubble Sort
+   d) Depth-First Search
+
+   Answer : b) Mark-and-Sweep
+
+5. In Java, which part of the memory is managed by the Garbage Collector?
+   a) Stack
+   b) Heap
+   c) Cache
+   d) Register
+
+   Answer :  a) Stack
+
+6. Which of the following is not a generation in the generational garbage collection model?
+   a) Young Generation
+   b) Old Generation
+   c) Infant Generation
+   d) Permanent Generation
+
+   Answer :  c) Infant Generation
+
+7. What is a "stop-the-world" event in the context of Garbage Collection?
+   a) A situation where the Garbage Collector runs concurrently with the application
+   b) A situation where the application is paused while Garbage Collection is performed
+   c) A situation where an object is pinned in memory
+   d) A situation where Garbage Collection never occurs
+
+Answer : b) A situation where the application is paused while Garbage Collection is performed
+
+8. What is the purpose of the "System.gc()" method in Java?
+   a) To explicitly trigger garbage collection
+   b) To increase memory allocation for the JVM
+   c) To reduce the memory footprint of an application
+   d) To start a new JVM instance
+
+   Answer a) To explicitly trigger garbage collection.
+
+9. Which garbage collection algorithm is typically used for the Young Generation in the JVM?
+   a) Mark-and-Sweep
+   b) Generational Garbage Collection
+   c) Parallel Garbage Collection
+   d) Concurrent Garbage Collection
+
+   Answer : a) Mark-and-Sweep.
+
+10. In the context of Garbage Collection, what is the PermGen (Permanent Generation) used for?
+    a) Storing live objects
+    b) Storing the heap
+    c) Storing class metadata, such as classes and methods
+    d) Managing thread pools
+
+    Answer : c) Storing class metadata, such as classes and methods.
+
+
+Subjective Questions:
+
+11. Why Garbage Collection is necessary in Java?
+Answer : It is necessary because Java atomatically control unnessacery things which is not required. If some variable are unreachable than it will delete that variable so there will be no proble for crash the program.
+
+12. What is the drawback to Garbage Collection?
+Answer : It follow the mark and sweep rule. first the data will go in eden and then according to their use it will send it in S0 and S1 and however it will swap according to their reachability it will increase count by 1.
+
+13. What do you mean by mark-and-sweep?
+Answer : mark-an-sweep follow reachable and unreachable rule. whatever is nor rechable that will be deleted by garbage collector. first the data will go in eden and then according to their use it will send it in S0 and S1 and however it will swap according to their reachability it will increase count by 1.
+
+14. What is the difference between Heap and Stack in Java?
+
+Heap: It is reference type. It is dynamic and it is not safe that much as Stack. and it store objects etc. 
+
+Stack: It is static type. It follow the LIFO (Last in First out) algorithm. It store primitive type data like : int, float and double etc.
+
+
+15. Write a Stack Program.
+
+import java.util.ArrayList;
+
+public class StackImplement{
+	public static void main(String[] args){
+		Stack stackimpl = new Stack();
+		stackimpl.push(3);
+		stackimpl.push(4);
+		stackimpl.push(7);
+		stackimpl.push(8);
+		stackimpl.peek();
+		stackimpl.pop();
+	}
+}
+
+class Stack{
+	private ArrayList<Integer> stackList = new ArrayList<Integer>();
+
+	public void push(int num){
+		stackList.add(num);
+	}	
+	public void pop(){
+		if (stackList.isEmpty()) System.out.println("Stack is already empty.");
+		stackList.remove(stackList.size()-1);
+	}
+	public void peek(){
+		if (stackList.isEmpty()) System.out.println("Stack is empty, so you cannot access element.");
+		 System.out.println(stackList.get(stackList.size()-1));
+	}
+}
+
