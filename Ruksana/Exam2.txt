@@ -1,0 +1,121 @@
+
+1. What is the purpose of the Java Garbage Collector?
+   a) To allocate memory for objects
+   b) To release memory occupied by unused objects
+   c) To optimize code execution
+   d) To manage database connections
+
+1> Answer is "b".
+
+2. Which part of the Java Virtual Machine (JVM) is responsible for garbage collection?
+   a) Class Loader
+   b) JVM Compiler
+   c) Runtime Data Area
+   d) Bytecode Verifier
+2> Answer is "C".
+
+3. How does the Garbage Collector determine if an object is eligible for garbage collection?
+   a) By checking if the object is reachable
+   b) By examining the object's reference count
+   c) By the size of the object
+   d) By the object's creation time
+3> Answer is "A".
+
+4. Which of the following are Java Garbage Collection algorithms?
+   a) Stack-based algorithm
+   b) Mark-and-Sweep
+   c) Bubble Sort
+   d) Depth-First Search
+4>  Answer is "B".
+
+5. In Java, which part of the memory is managed by the Garbage Collector?
+   a) Stack
+   b) Heap
+   c) Cache
+   d) Register
+5> Answer is "B" .
+
+6. Which of the following is not a generation in the generational garbage collection model?
+   a) Young Generation
+   b) Old Generation
+   c) Infant Generation
+   d) Permanent Generation
+6>Answer is "C".
+
+7. What is a "stop-the-world" event in the context of Garbage Collection?
+   a) A situation where the Garbage Collector runs concurrently with the application
+   b) A situation where the application is paused while Garbage Collection is performed
+   c) A situation where an object is pinned in memory
+   d) A situation where Garbage Collection never occurs
+7> Answer is "B".
+
+8. What is the purpose of the "System.gc()" method in Java?
+   a) To explicitly trigger garbage collection
+   b) To increase memory allocation for the JVM
+   c) To reduce the memory footprint of an application
+   d) To start a new JVM instance
+8> Answer is "A".
+
+9. Which garbage collection algorithm is typically used for the Young Generation in the JVM?
+   a) Mark-and-Sweep
+   b) Generational Garbage Collection
+   c) Parallel Garbage Collection
+   d) Concurrent Garbage Collection
+9>Answer is "B".
+
+10. In the context of Garbage Collection, what is the PermGen (Permanent Generation) used for?
+    a) Storing live objects
+    b) Storing the heap
+    c) Storing class metadata, such as classes and methods
+    d) Managing thread pools
+
+10> Answer is "C".
+
+
+Subjective Questions:
+
+11. Why Garbage Collection is necessary in Java?
+
+11> Answer is , Automatic memory spaces for this we need Garbage collection,
+for no long using data it can remove automatically for free up the memory 
+for future use so we no need to say Garbage collector to remove the space, 
+it automatically works.
+
+12. What is the drawback to Garbage Collection?
+
+12> Answer is,basically the unused data is removing automatically from the help of JVM 
+so that memory freaking happens in that it , the work of GC is required more cost and memory works. 
+
+13. What do you mean by mark-and-sweep?
+13>Answer is, in marking phase and sweeping phase, in that firstly this phases are happening in the eden and surviour process,
+ so first we are marking the unsed data then , compact phase happening here , after marking the eden dats goes into the surviour
+ in that S0,S1 is there here that data is storing and the age also increasing here each time we are shifing from the S0 to S1.
+
+
+14. What is the difference between Heap and Stack in Java?
+14> Answer is , statck is static and heap is dynamic way of using , in statck the push(),pop(),peak(),isEmpty() 
+method are happening, for example if we write a simple prorgram og employee name and age that attributes and its constructor
+is stores into the stack coming for the heap all the methos data get into the heap,all the local variables and partial results are storing in  the stack ,
+
+
+
+
+15. Write a Stack Program.
+Stack works on LIFO so that is last in first out ,
+first we have to create a stack,
+if stack is empty ,
+we have use push() method to store the values on the stack,
+if we want to the top element by using peak() method we can get the value,
+if we want to delete values from the statck by using pop() method we can remove these all the basic functionalities of the stack.
+
+
+
+
+
+
+
+
+
+
+
+
