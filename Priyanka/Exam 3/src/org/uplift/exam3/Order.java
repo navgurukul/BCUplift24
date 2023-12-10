@@ -47,6 +47,7 @@ public class Order {
                 "id=" + id +
                 ", orderItems=" + orderItems +
                 ", shippingAddress=" + shippingAddress +
+                ", Total price =" + getPrice() +
                 '}';
     }
 }
