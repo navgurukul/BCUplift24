@@ -4,7 +4,7 @@
         transaction history, and security measures like
         OTP verification or two-factor authentication.
 */
-package org.example;
+package org.uplift;
 
 public class Main {
     public static void main(String[] args) {
