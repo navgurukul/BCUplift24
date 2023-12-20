@@ -24,7 +24,7 @@ public class SavingsAccount implements Account{
     public double showBalance() {
         return balance;
     }
-    
+
 
     @Override
     public double deposit(double amount) {
