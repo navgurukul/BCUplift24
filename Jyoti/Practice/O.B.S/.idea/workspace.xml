@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66b64fef-de62-4c66-9a27-331f9686a4d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/SavingAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/exception/InsufficientBalanceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/InsaficentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/SavingAccountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Bank/TransactionManger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/Bank/TransactionMangerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../O.B.S/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/SavingAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/SavingAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -69,8 +64,32 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.uplift.account.Bank" />
       <recent name="org.uplift.account" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TransactionMangerTest.transfar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="O.B.S." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.account.Bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.account.Bank" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.account.Bank.TransactionMangerTest" />
+      <option name="METHOD_NAME" value="transfar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TransactionMangerTest.transfar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

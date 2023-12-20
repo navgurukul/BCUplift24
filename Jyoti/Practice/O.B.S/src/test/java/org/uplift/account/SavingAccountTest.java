@@ -17,7 +17,7 @@ class SavingAccountTest {
 
     @BeforeEach
     void setUp(){
-        user = new User("ashwini","234564566","ashwini@gmail.com","ashwini12","ashwini@123");
+        user = new User("jyoti","234564566","ashwini@gmail.com","ashwini12","ashwini@123");
 
         sa = new SavingAccount("1234","ashwini",ACCOUNT_BALANCE,new Date(),user, 500);
 
