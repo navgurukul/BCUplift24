@@ -5,5 +5,6 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Committed in nehasaraf-obs Branch ");
+        System.out.println("Committed from nehasaraf-obs Branch ");
     }
 }
