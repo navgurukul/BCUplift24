@@ -1,4 +1,4 @@
-package org.example.obs2;
+package org.uplift;
 
 
 public class Main {
