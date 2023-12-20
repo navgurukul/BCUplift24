@@ -1,7 +1,7 @@
-package org.example.githhub;
+package org.example.obs;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("in branch 1 ");
+        System.out.println("Hello world!");
     }
 }
