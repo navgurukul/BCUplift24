@@ -5,7 +5,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         System.out.println("commited in mohit-obs");
-        System.out.println("commited in");
+        System.out.println("mohit");
 
     }
 }
