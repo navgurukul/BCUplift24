@@ -2,7 +2,7 @@ package org.uplift.account;
 
 public interface Account {
     public double showBalance();
-    public boolean deposit(double amount);
-    public boolean withdraw(double amount);
+    public double deposit(double amount);
+    public double withdraw(double amount) throws InsufficientBalanceException;
 
 }

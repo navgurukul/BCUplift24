@@ -7,12 +7,12 @@ public class CurrentAccount implements Account {
     }
 
     @Override
-    public boolean deposit(double amount) {
-        return false;
+    public double deposit(double amount) {
+        return 0;
     }
 
     @Override
-    public boolean withdraw(double amount) {
-        return false;
+    public double withdraw(double amount) {
+        return 0;
     }
 }
