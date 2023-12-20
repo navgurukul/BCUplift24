@@ -1,5 +1,7 @@
 package org.uplift.user;
 
+import org.uplift.account.Account;
+
 public class User {
     private String name;
     private String mobileNum;
@@ -14,7 +16,6 @@ public class User {
         this.username = username;
         this.password = password;
     }
-
 
 
 }
