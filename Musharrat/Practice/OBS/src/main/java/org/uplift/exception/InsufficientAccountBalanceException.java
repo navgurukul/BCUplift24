@@ -1,4 +1,4 @@
-package org.uplift.account;
+package org.uplift.exception;
 
 public class InsufficientAccountBalanceException extends Exception{
     public InsufficientAccountBalanceException(String message){
