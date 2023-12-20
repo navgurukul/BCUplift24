@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66b64fef-de62-4c66-9a27-331f9686a4d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Bank/TransactionManger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/Bank/TransactionMangerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/SavingAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/SavingAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
