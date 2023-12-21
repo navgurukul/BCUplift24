@@ -40,4 +40,25 @@ public class SavingAccount implements Account {
         balance-=amount;
         return balance;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public Date getOpeningDate() {
+        return openingDate;
+    }
+
+    public double getOverdraftLimit() {
+        return overdraftLimit;
+    }
+
 }
