@@ -41,4 +41,14 @@ public class SavingsAccount implements Account{
         this.balance -= amount;
         return balance;
     }
+
+    @Override
+    public String getAccountNumber(){
+        return accountNumber;
+    }
+
+    @Override
+    public User getUser(){
+        return user;
+    }
 }

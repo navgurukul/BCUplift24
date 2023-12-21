@@ -11,4 +11,16 @@ public class AccountManager {
     public boolean addAccount(Account account) {
         return accounts.add(account);
     }
+
+    public Account findByAccountNumber(String accountNumber) {
+        return accounts.stream().filter((a) -> a.getAccountNumber().equals(accountNumber)).findFirst().orElse(null);
+    }
+
+    public Account findByPhoneNumber(String mobileNumber) {
+        return accounts.stream().filter(account -> account.getUser().getMobile().equals(mobileNumber)).findFirst().orElse(null);
+    }
+
+    public Account findByUserName(String userName) {
+        return accounts.stream().filter(account -> account.getUser().equals(userName)).findFirst().orElse(null);
+    }
 }

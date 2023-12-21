@@ -10,6 +10,7 @@ public class TransactionManager {
 
     private Random random;
     private Set<Transaction> transactionsHistory = new HashSet<>();
+    private AccountManager accountManager = new AccountManager();
 
     public void setRandom(Random random){
         this.random = random;
@@ -25,9 +26,34 @@ public class TransactionManager {
 
 
     public Transaction findByTransactionId(String txtId) {
-        for (Transaction t : transactionsHistory){
-            if (t.getId().equals(txtId)) return t;
+        return transactionsHistory.stream().filter(t->t.getId().equals(txtId)).findFirst().orElse(null);
+//        for (Transaction t : transactionsHistory){
+//            if (t.getId().equals(txtId)) return t;
+//        }
+//        return null;
+    }
+
+    public Transaction makePayment(String source, TransferType sourceType, String target, TransferType targetType , double amount) throws InsufficientAccountBalanceException {
+        Account sourceAccount = findAccount(source, sourceType);
+        Account targetAccount = findAccount(target, targetType);
+
+        return transfer(sourceAccount, targetAccount, amount);
+
+    }
+
+    private Account findAccount(String source, TransferType sourceType) {
+        Account account = null;
+        switch (sourceType){
+            case ACCOUNT_ID -> {
+                account = accountManager.findByAccountNumber(source);
+            }
+            case MOBILE -> {
+                account = accountManager.findByPhoneNumber(source);
+            }
+            case USERNAME -> {
+                account = accountManager.findByUserName(source);
+            }
         }
-        return null;
+        return account;
     }
 }
