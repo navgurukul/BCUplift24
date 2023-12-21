@@ -1,4 +1,4 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.uplift.account.user.User;
-import org.uplift.bank.security.Timer;
+import org.uplift.banking.security.Timer;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,11 +1,10 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.uplift.account.Account;
 import org.uplift.account.SavingAccount;
 import org.uplift.account.user.User;
 

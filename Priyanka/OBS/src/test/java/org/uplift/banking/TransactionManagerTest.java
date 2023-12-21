@@ -1,4 +1,4 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +12,7 @@ import org.uplift.account.Transaction;
 import org.uplift.account.exception.InsufficientBalanceException;
 import org.uplift.account.exception.InvalidOtpException;
 import org.uplift.account.user.User;
-import org.uplift.bank.security.TransactionManager;
+import org.uplift.banking.security.TransactionManager;
 
 import java.util.Random;
 
@@ -66,7 +66,9 @@ class TransactionManagerTest {
     }
 
     @Test
-    void makePaymentThrowInvalidOtpException() {
+    void makePaymentThrowInvalidOtpException() throws OtpExpiredException {
+        when(otpGenerator.validateOtp()).thenReturn(false);
+        assertThrows(InvalidOtpException.class,()->tm.makePayment(ACCOUNT_NUMBER,TransferType.account,MOBILE_NUMBER,TransferType.mobile,1200.0));
 
     }
 }

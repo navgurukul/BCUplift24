@@ -1,4 +1,4 @@
-package org.uplift.bank.security;
+package org.uplift.banking.security;
 
 import java.util.Date;
 

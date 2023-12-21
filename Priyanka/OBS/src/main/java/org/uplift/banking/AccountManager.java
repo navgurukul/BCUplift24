@@ -1,7 +1,6 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
 import org.uplift.account.Account;
-import org.uplift.account.SavingAccount;
 
 import java.util.HashSet;
 import java.util.Set;

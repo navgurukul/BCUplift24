@@ -1,14 +1,13 @@
-package org.uplift.bank.security;
+package org.uplift.banking.security;
 
 import org.uplift.account.Account;
-import org.uplift.account.SavingAccount;
 import org.uplift.account.Transaction;
 import org.uplift.account.exception.InsufficientBalanceException;
 import org.uplift.account.exception.InvalidOtpException;
-import org.uplift.bank.AccountManager;
-import org.uplift.bank.OtpExpiredException;
-import org.uplift.bank.OtpGenerator;
-import org.uplift.bank.TransferType;
+import org.uplift.banking.AccountManager;
+import org.uplift.banking.OtpExpiredException;
+import org.uplift.banking.OtpGenerator;
+import org.uplift.banking.TransferType;
 
 
 import java.util.*;

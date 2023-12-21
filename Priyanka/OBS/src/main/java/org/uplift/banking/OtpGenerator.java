@@ -1,9 +1,7 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
-import org.uplift.bank.security.Timer;
+import org.uplift.banking.security.Timer;
 
-import javax.imageio.plugins.tiff.TIFFDirectory;
-import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
