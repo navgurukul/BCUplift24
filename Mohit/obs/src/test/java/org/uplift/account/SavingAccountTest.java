@@ -2,7 +2,7 @@ package org.uplift.account;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.uplift.exception.InsufficientBalanceException;
+import org.uplift.exception.InSufficientBalanceException;
 import org.uplift.user.User;
 
 import java.util.Date;
@@ -35,19 +35,19 @@ class SavingAccountTest {
     }
 
     @Test
-    void withdraw() throws InsufficientBalanceException {
+    void withdraw() throws InSufficientBalanceException {
         double expectedBalance=ACCOUNT_BALANCE-1000;
         assertEquals(expectedBalance,sa.withdraw(1000));
     }
     @Test
-    void withdrawOverLimit() throws InsufficientBalanceException {
+    void withdrawOverLimit() throws InSufficientBalanceException {
         double exceptedBalance=ACCOUNT_BALANCE-OD_LIMIT;
         assertEquals(-OD_LIMIT,sa.withdraw(ACCOUNT_BALANCE+OD_LIMIT));
     }
 
     @Test
     void withDrawWithODLimitBreach(){
-        assertThrows(InsufficientBalanceException.class,()->sa.withdraw(ACCOUNT_BALANCE+OD_LIMIT+1));
+        assertThrows(InSufficientBalanceException.class,()->sa.withdraw(ACCOUNT_BALANCE+OD_LIMIT+1));
 
     }
 }

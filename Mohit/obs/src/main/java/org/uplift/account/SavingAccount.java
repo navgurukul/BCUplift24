@@ -1,6 +1,6 @@
 package org.uplift.account;
 
-import org.uplift.exception.InsufficientBalanceException;
+import org.uplift.exception.InSufficientBalanceException;
 import org.uplift.user.User;
 
 import java.util.Date;
@@ -32,9 +32,9 @@ public class SavingAccount implements Account{
     }
 
     @Override
-    public double withdraw(double amount) throws InsufficientBalanceException {
+    public double withdraw(double amount) throws InSufficientBalanceException {
         if(amount>balance+overoverDraftLimit) {
-            throw new InsufficientBalanceException("Balance is not available");
+            throw new InSufficientBalanceException("Balance is not available");
         }
         balance -= amount;
         return balance;
