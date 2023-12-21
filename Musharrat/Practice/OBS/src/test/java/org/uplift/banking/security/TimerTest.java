@@ -1,9 +1,8 @@
-package org.uplift.bank.security;
+package org.uplift.banking.security;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.sql.Time;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
