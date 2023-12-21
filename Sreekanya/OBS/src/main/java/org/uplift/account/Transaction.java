@@ -19,6 +19,27 @@ public class Transaction {
         this.amount = amount;
         this.transactionId=transactionId;
     }
+
+    public Account getSourceAccount() {
+        return sourceAccount;
+    }
+
+    public Account getTargetAccount() {
+        return targetAccount;
+    }
+
+    public Date getTransactionDate() {
+        return transactionDate;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
