@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66b64fef-de62-4c66-9a27-331f9686a4d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/OTPManager/OTPManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/OTPManager/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/exception/OtpExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/OTPManager/OTPMangerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/OTPManager/TimerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -31,6 +36,9 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2ZnrpcCIDaJAze4GN7Medsvg5zx" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -54,17 +62,83 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.uplift.exception" />
       <recent name="org.uplift.account" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.uplift.OTPManager" />
       <recent name="org.uplift.account.Bank" />
       <recent name="org.uplift.account" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.OtpManagerTest.validateOtp">
+    <configuration name="OTPManagerTest.generateOTP" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="O.B.S." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.OTPManager" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.OTPManager.OTPManagerTest" />
+      <option name="METHOD_NAME" value="generateOTP" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OTPManagerTest.generateOTP_customLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="O.B.S." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.OTPManager" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.OTPManager.OTPManagerTest" />
+      <option name="METHOD_NAME" value="generateOTP_customLength" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OTPManagerTest.generateOTP_defaultLength" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="O.B.S." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.OTPManager" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.OTPManager.OTPManagerTest" />
+      <option name="METHOD_NAME" value="generateOTP_defaultLength" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OtpManagerTest.validateOtp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="O.B.S." />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.OTPManager" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.OTPManager.OtpManagerTest" />
+      <option name="METHOD_NAME" value="validateOtp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TransactionMangerTest.transfar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="O.B.S." />
       <extension name="coverage">
@@ -83,6 +157,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OtpManagerTest.validateOtp" />
+        <item itemvalue="JUnit.OTPManagerTest.generateOTP" />
+        <item itemvalue="JUnit.OTPManagerTest.generateOTP_customLength" />
+        <item itemvalue="JUnit.OTPManagerTest.generateOTP_defaultLength" />
         <item itemvalue="JUnit.TransactionMangerTest.transfar" />
       </list>
     </recent_temporary>
