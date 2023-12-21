@@ -7,6 +7,7 @@ import java.util.*;
 
 public class TransactionManager {
     private Random random;
+    private AccountManager accountManager;
     private Set<Transaction> transactionHistory=new HashSet<>();
 
     public void setRandom(Random random) {
@@ -30,7 +31,26 @@ public class TransactionManager {
                 .findFirst().orElse(null);
     }
 
+    public Transaction makePayment(String source,TransferType sourceType,String target,TransferType targetType,double amount)
+    throws InsufficientBalanceException{
+        Account sourceAccount= findAccount(source, sourceType);
+        Account targetAccount=findAccount(target,targetType);
+        return transfer(sourceAccount,targetAccount,amount);
+    }
 
+    private Account findAccount(String source, TransferType sourceType) {
+        Account account=null;
+        switch(sourceType){
+            case ACCOUNT_ID ->{
+                account=accountManager.findByAccountNumber(source);
+            }
+            case MOBILE -> {
+                account=accountManager.findByMobile(source);
+            }
+            case USERNAME -> {
+                account=accountManager.findByUserName(source);
+            }
 
-
+        }return account;
+    }
 }

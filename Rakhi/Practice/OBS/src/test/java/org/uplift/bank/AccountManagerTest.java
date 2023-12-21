@@ -31,9 +31,11 @@ class AccountManagerTest {
         when(account.getAccountNumber()).thenReturn("A123");
         when(account.getUser()).thenReturn(user);
         when(user.getMobile()).thenReturn("12345678");
+        when(user.getUserName()).thenReturn("rakhi12");
         assertTrue(accountManager.addAccount(account));
         assertEquals(account,accountManager.findByAccountNumber(account.getAccountNumber()));
         assertEquals(account,accountManager.findByMobile("12345678"));
+        assertEquals(account,accountManager.findByUserName("rakhi12"));
     }
 
 }

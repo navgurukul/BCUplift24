@@ -24,4 +24,8 @@ public class AccountManager {
                 .findFirst().orElse(null);
     }
 
+    public Account findByUserName(String userName){
+        return userAccount.stream().filter(account -> account.getUser().getUserName().equals(userName))
+                .findFirst().orElse(null);
+    }
 }

@@ -13,20 +13,19 @@ import org.uplift.exception.InsufficientBalanceException;
 import org.uplift.user.User;
 
 import java.util.Date;
-import java.util.Objects;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
+import static org.uplift.bank.TransferType.ACCOUNT_ID;
+import static org.uplift.bank.TransferType.MOBILE;
 
 class TransactionManagerTest {
-    private Account source;
-    private Account target;
-    private User sourceUser;
-    private User targetUser;
-
     @Mock
     private Random random;
+
+    @Mock
+    AccountManager accountManager;
 
     @InjectMocks
     private TransactionManager transactionManager;
@@ -34,10 +33,10 @@ class TransactionManagerTest {
     @BeforeEach
     void setUp(){
         MockitoAnnotations.openMocks(this);
-        sourceUser=new User("ABC","12345","rakhi@123","rk23","rakhik@90");
-        targetUser=new User("CDE","67890","nisha@123","nn23","nisha@90");
-        source=new SavingsAccount(sourceUser,"123ABC",5000.0,new Date(),2000);
-        target=new SavingsAccount(targetUser,"123CDE",5000.0,new Date(),2000.0);
+//        sourceUser=new User("ABC","12345","rakhi@123","rk23","rakhik@90");
+//        targetUser=new User("CDE","67890","nisha@123","nn23","nisha@90");
+//        source=new SavingsAccount(sourceUser,"123ABC",5000.0,new Date(),2000);
+//        target=new SavingsAccount(targetUser,"123CDE",5000.0,new Date(),2000.0);
     }
 
     @Test
@@ -49,8 +48,10 @@ class TransactionManagerTest {
 //        Transaction expectedTransaction=new Transaction(source,target,new Date(),100,txnId);
         Account sa= mock(SavingsAccount.class);
         Account ta=mock(SavingsAccount.class);
-        Transaction t=transactionManager.transfer(sa,ta,1000);
+
         InOrder io=inOrder(sa,ta);
+        Transaction t=transactionManager.transfer(sa,ta,1000);
+
         assertEquals(""+randomNumber,t.getId());
 //        transactionManager.transfer(sa,ta,1000);
         verify(sa,times(1)).withdraw(1000);
@@ -58,6 +59,22 @@ class TransactionManagerTest {
         io.verify(sa).withdraw(1000);
         io.verify(ta).deposit(1000);
         assertEquals(t,transactionManager.findByTransactionId(""+randomNumber));
+
+    }
+
+
+    @Test
+    void makePayment() throws InsufficientBalanceException {
+        Account sa=mock(SavingsAccount.class);
+        Account ta=mock(SavingsAccount.class);
+        int randomNumber=100000001;
+        when(random.nextInt(100000,100000000)).thenReturn(randomNumber);
+
+        when(accountManager.findByAccountNumber("A123")).thenReturn(sa);
+        when(accountManager.findByMobile("123456")).thenReturn(ta);
+        assertEquals(""+randomNumber,
+                transactionManager.makePayment("A123", TransferType.ACCOUNT_ID,"123456",
+                        TransferType.MOBILE,10000.0).getId());
 
     }
 
