@@ -1,4 +1,4 @@
-package org.uplift.Bank;
+package org.uplift.bank;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,11 +11,8 @@ import org.uplift.account.Transaction;
 import org.uplift.exception.InsufficientAccountBalanceException;
 import org.uplift.user.User;
 import org.mockito.Mock;
-
 import java.util.Date;
-import java.util.Objects;
 import java.util.Random;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 

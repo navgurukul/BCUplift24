@@ -1,4 +1,4 @@
-package org.uplift.Bank;
+package org.uplift.bank;
 
 import org.uplift.account.Account;
 import org.uplift.account.Transaction;
@@ -18,11 +18,11 @@ public class TransactionManager {
         source.withdraw(amount);
         target.deposit(amount);
         String txnId = ""+random.nextInt(1000000, 1000000000);
-//        return new Transaction(source, target, new Date(), amount, txnId);
         Transaction t = new Transaction(source, target, new Date(), amount, txnId);
         transactionsHistory.add(t);
         return t;
     }
+
 
     public Transaction findByTransactionId(String txtId) {
         for (Transaction t : transactionsHistory){
