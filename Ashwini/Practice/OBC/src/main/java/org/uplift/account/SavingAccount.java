@@ -41,4 +41,11 @@ public class SavingAccount implements  Account {
 
     }
 
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

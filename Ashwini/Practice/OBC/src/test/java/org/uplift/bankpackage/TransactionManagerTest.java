@@ -29,6 +29,10 @@ class TransactionManagerTest {
     @Mock
     private Random random;
 
+    @Mock
+    private AccountManager accountManager;
+
+
     @InjectMocks
     private TransactionManager tm;
 
@@ -67,6 +71,17 @@ class TransactionManagerTest {
 
 
 
+
+    }
+    @Test
+    void testMakePayment() throws InsufficientBalanceException {
+        int randomNumber = 10000001;
+        Account sa = mock(SavingAccount.class);
+        Account ta = mock(SavingAccount.class);
+        when(random.nextInt(1000000,100000000)).thenReturn(randomNumber);
+        when(accountManager.findByAccountNumber("A123")).thenReturn(sa);
+        when(accountManager.findByUserMobileNo("+91 - 987655")).thenReturn(ta);
+        assertEquals(""+randomNumber,tm.makePayment("A123",TransferType.ACCOUNTID,"+91 - 987655",TransferType.MOBILE, 1415.5).getTransactionId());
 
     }
 
