@@ -1,5 +1,6 @@
 package org.uplift.account;
 
+import javafx.beans.value.ObservableBooleanValue;
 import org.uplift.exception.InSufficientBalanceException;
 import org.uplift.user.User;
 
@@ -38,5 +39,17 @@ public class SavingAccount implements Account{
         }
         balance -= amount;
         return balance;
+    }
+
+//    @Override
+//    public String findAccountNumber() {
+//
+//    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+    public User getUser(){
+        return user;
     }
 }

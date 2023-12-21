@@ -18,4 +18,12 @@ public class User {
     public String getPassword() {
         return password;
     }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public  String getUsername() {
+        return userName;
+    }
 }

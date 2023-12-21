@@ -1,13 +1,11 @@
 package org.uplift;
 
 import org.uplift.account.SavingAccount;
-import org.uplift.bank.TransactionManager;
-import org.uplift.exception.InSufficientBalanceException;
+import org.uplift.banking.TransactionManager;
 import org.uplift.user.User;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -23,13 +21,13 @@ public class Main {
 
 
         TransactionManager tm=new TransactionManager();
-        try{
-            tm.verifyTransaction(s1,s2,2000);
-            System.out.println("Transaction complete");
-        }
-        catch (InSufficientBalanceException e){
-            System.out.println(e.getMessage());
-        }
+//        try{
+////            tm.verifyTransaction(s1,s2,2000);
+//            System.out.println("Transaction complete");
+//        }
+//        catch (InSufficientBalanceException e){
+//            System.out.println(e.getMessage());
+//        }
 
 
 
