@@ -1,4 +1,4 @@
-package org.uplift.bankpackage;
+package org.uplift.banking;
 
 import org.uplift.account.Account;
 import org.uplift.account.SavingAccount;

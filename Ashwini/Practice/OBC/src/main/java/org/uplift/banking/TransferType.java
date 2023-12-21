@@ -1,4 +1,4 @@
-package org.uplift.bankpackage;
+package org.uplift.banking;
 
 public enum TransferType {
 

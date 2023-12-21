@@ -1,4 +1,4 @@
-package org.uplift.bankpackage;
+package org.uplift.banking;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,23 +6,26 @@ import org.mockito.InOrder;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.uplift.OTPManager.OtpManager;
 import org.uplift.account.Account;
 import org.uplift.account.SavingAccount;
 import org.uplift.account.Transaction;
 import org.uplift.uplifte.exceptionhandling.InsufficientBalanceException;
+import org.uplift.uplifte.exceptionhandling.InvalidOtpException;
+import org.uplift.uplifte.exceptionhandling.OtpExpiredException;
 import org.uplift.user.User;
 
 import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class TransactionManagerTest {
 
+
     private Account source;
-
-
     private Account target;
     private User sourceUser;
     private User targetUser;
@@ -31,10 +34,17 @@ class TransactionManagerTest {
 
     @Mock
     private AccountManager accountManager;
+    @Mock
+    private OtpManager otpManager;
+
+    @InjectMocks
+    private RetailBankingprovider retailBankingprovider;
 
 
     @InjectMocks
     private TransactionManager tm;
+    @Mock
+    private Scanner scanner;
 
 
     @BeforeEach
@@ -44,8 +54,6 @@ class TransactionManagerTest {
         targetUser = new User("Priti","786543479","priti@gmail.com","priti122","Priti@123");
         source = new SavingAccount("SA9877654335","Jyoti",100000,new Date(),sourceUser,10000);
         target = new SavingAccount("SA9877654335","Priti",100,new Date(),targetUser,1000);
-
-
     }
     @Test
     void transfer() throws InsufficientBalanceException {
@@ -68,21 +76,25 @@ class TransactionManagerTest {
         io.verify(sa).withdraw(1000);
         io.verify(ta).deposit(1000);
         assertEquals(t, tm.findByTransactionId(""+randomNumer));
-
-
-
-
     }
     @Test
-    void testMakePayment() throws InsufficientBalanceException {
+    void testMakePayment() throws Exception {
         int randomNumber = 10000001;
         Account sa = mock(SavingAccount.class);
         Account ta = mock(SavingAccount.class);
         when(random.nextInt(1000000,100000000)).thenReturn(randomNumber);
         when(accountManager.findByAccountNumber("A123")).thenReturn(sa);
         when(accountManager.findByUserMobileNo("+91 - 987655")).thenReturn(ta);
+        when(otpManager.validateOtp()).thenReturn(true);
         assertEquals(""+randomNumber,tm.makePayment("A123",TransferType.ACCOUNTID,"+91 - 987655",TransferType.MOBILE, 1415.5).getTransactionId());
+        verify(otpManager,times(1)).validateOtp();
 
     }
+    @Test
+    void makePaymentThrowsInvalidOtpException() throws OtpExpiredException {
+        when(otpManager.validateOtp()).thenReturn(false);
+        assertThrows(InvalidOtpException.class, () -> tm.makePayment("A123", TransferType.ACCOUNTID, "+91 - 987655", TransferType.MOBILE, 1415.5));
+    }
+
 
 }
