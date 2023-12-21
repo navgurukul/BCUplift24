@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.uplift.account.Account;
-import org.uplift.bank.Bank;
+import org.uplift.bank.AccountManager;
+import org.uplift.bank.security.AuthenticationManager;
 import org.uplift.user.User;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -17,7 +17,7 @@ class AuthenticationManagerTest {
     User user;
 
     @Mock
-    Bank bank;
+    AccountManager bank;
 
     @InjectMocks
     AuthenticationManager authenticationManger;

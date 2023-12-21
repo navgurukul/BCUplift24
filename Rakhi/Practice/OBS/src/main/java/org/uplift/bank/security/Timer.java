@@ -1,4 +1,4 @@
-package org.uplift.security;
+package org.uplift.bank.security;
 
 import javax.xml.crypto.Data;
 import java.util.Date;

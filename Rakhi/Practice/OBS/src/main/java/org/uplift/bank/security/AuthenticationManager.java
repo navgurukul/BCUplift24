@@ -1,10 +1,9 @@
-package org.uplift.security;
+package org.uplift.bank.security;
 
-import org.uplift.bank.Bank;
-import org.uplift.user.User;
+import org.uplift.bank.AccountManager;
 
 public class AuthenticationManager {
-    private Bank bank;
+    private AccountManager bank;
     public boolean logIn(String userName,String password){
         String thisUserPassword=bank.getUserMap().get(userName).getPassword();
         if(bank.getUserMap().containsKey(userName) && thisUserPassword.equals(password)){

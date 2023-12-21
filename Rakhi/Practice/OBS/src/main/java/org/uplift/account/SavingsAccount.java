@@ -1,6 +1,5 @@
 package org.uplift.account;
 
-import org.uplift.bank.Bank;
 import org.uplift.exception.InsufficientBalanceException;
 import org.uplift.user.User;
 
