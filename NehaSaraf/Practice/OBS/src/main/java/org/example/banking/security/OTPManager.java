@@ -1,8 +1,7 @@
-package org.example.security;
+package org.example.banking.security;
 
 import org.example.exception.OTPExpiredException;
 
-import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 

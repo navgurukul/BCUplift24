@@ -14,4 +14,24 @@ public class User {
         this.userName = userName;
         this.password = password;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getMobileNumber() {
+        return mobileNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

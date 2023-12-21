@@ -1,8 +1,8 @@
-package org.example.bank;
+package org.example.banking;
 
 import org.example.exception.OTPExpiredException;
-import org.example.security.OTPManager;
-import org.example.security.Timer;
+import org.example.banking.security.OTPManager;
+import org.example.banking.security.Timer;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
