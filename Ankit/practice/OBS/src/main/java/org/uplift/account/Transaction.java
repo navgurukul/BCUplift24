@@ -1,6 +1,7 @@
 package org.uplift.account;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Transaction {
     private Account sourceAccount;
@@ -16,4 +17,30 @@ public class Transaction {
         this.transactionId = transactionId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Transaction that)) return false;
+        return Double.compare(amount, that.amount) == 0 && Objects.equals(sourceAccount, that.sourceAccount) && Objects.equals(targetAccount, that.targetAccount) && Objects.equals(transactionDate, that.transactionDate) && Objects.equals(transactionId, that.transactionId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(sourceAccount, targetAccount, transactionDate, amount, transactionId);
+    }
+
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "sourceAccount=" + sourceAccount +
+                ", targetAccount=" + targetAccount +
+                ", transactionDate=" + transactionDate +
+                ", amount=" + amount +
+                ", transactionId='" + transactionId + '\'' +
+                '}';
+    }
 }

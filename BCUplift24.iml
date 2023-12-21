@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Aishwarya" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ankit" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ashwini" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Dipti" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ExamAnswers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Gayatri" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Harsha" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Jainab" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Janhvi" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Jyoti" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Kajal" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Mohit" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Musharrat" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NehaDhore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NehaSaraf" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Nikita" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Nisha" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Priti" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Priyanka" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Riti" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ruksana" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sonam" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Sreekanya" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vaishnavi" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Vanshika" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="lib3" level="project" />
+    <orderEntry type="library" name="lib5" level="project" />
+    <orderEntry type="library" name="lib4" level="project" />
+    <orderEntry type="library" name="lib2" level="project" />
+    <orderEntry type="library" name="lib1" level="project" />
+  </component>
+</module>

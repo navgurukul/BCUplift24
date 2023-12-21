@@ -37,4 +37,13 @@ public class SavingAccount implements Account{
         return balance;
     }
 
+    @Override
+    public String toString() {
+        return "SavingAccount{" +
+                "user=" + user +
+                ", accountNumber='" + accountNumber + '\'' +
+                ", balance=" + balance +
+                ", openingDate=" + openingDate +
+                '}';
+    }
 }
