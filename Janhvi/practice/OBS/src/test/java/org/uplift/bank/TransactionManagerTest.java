@@ -9,12 +9,14 @@ import org.mockito.MockitoAnnotations;
 import org.uplift.account.Account;
 import org.uplift.account.SavingAccount;
 import org.uplift.account.Transaction;
+import org.uplift.bank.security.OTPManager;
 import org.uplift.exception.InSufficientBalanceException;
+import org.uplift.exception.InvalidPinException;
 import org.uplift.user.User;
 
 import java.util.Date;
-import java.util.Objects;
 import java.util.Random;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -33,13 +35,14 @@ class TransactionManagerTest {
 
     @InjectMocks
     private TransactionManager tm;
+    private Scanner scanner;
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-//       sourceUser = new User("Janhvi","1234","janhvi12@gmail.com","janhvi12","janu123");
-//       targetUser = new User("Sanika","2324","sanika@gmail.com","sanu@12","sanu123");
-//       source = new SavingAccount(sourceUser,"J12345",100000,new Date(),1000);
-//       target = new SavingAccount(targetUser,"S1234",20000,new Date(),2000);
+       sourceUser = new User("Janhvi","1234","janhvi12@gmail.com","janhvi12","janu123");
+       targetUser = new User("Sanika","2324","sanika@gmail.com","sanu@12","sanu123");
+       source = new SavingAccount(sourceUser,"J12345",100000,new Date(),1000);
+       target = new SavingAccount(targetUser,"S1234",20000,new Date(),2000);
     }
 
     @Test
@@ -62,4 +65,18 @@ class TransactionManagerTest {
 
 
     }
+    //@Test
+//    void testForverify() throws InvalidPinException {
+//        int randomNo = 100000001;
+//        when(random.nextInt(100000,10000000)).thenReturn(randomNo);
+//        when(scanner.next()).thenReturn("Janhvi12");
+//        OTPManager sc = new OTPManager();
+//        assertEquals(randomNo,sc.verifyUser(sourceUser,source,"123"));
+//
+//
+//
+//    }
+
+
+
 }
