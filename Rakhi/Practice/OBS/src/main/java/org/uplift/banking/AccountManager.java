@@ -1,11 +1,8 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
 import org.uplift.account.Account;
-import org.uplift.user.User;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 public class AccountManager {

@@ -1,6 +1,5 @@
-package org.uplift.bank.security;
+package org.uplift.banking.security;
 
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 public class Timer{

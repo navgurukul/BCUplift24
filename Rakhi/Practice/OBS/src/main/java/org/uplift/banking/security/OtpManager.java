@@ -1,7 +1,6 @@
-package org.uplift.bank.security;
+package org.uplift.banking.security;
 
 import org.uplift.exception.OtpExpiredException;
-import org.uplift.bank.security.Timer;
 
 import java.util.Random;
 

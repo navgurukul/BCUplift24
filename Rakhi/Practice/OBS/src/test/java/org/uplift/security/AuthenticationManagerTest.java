@@ -1,17 +1,5 @@
 package org.uplift.security;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
-import org.uplift.bank.AccountManager;
-import org.uplift.bank.security.AuthenticationManager;
-import org.uplift.user.User;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.when;
-
 class AuthenticationManagerTest {
 //    @Mock
 //    User user;

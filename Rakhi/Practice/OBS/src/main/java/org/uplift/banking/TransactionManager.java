@@ -1,13 +1,18 @@
-package org.uplift.bank;
+package org.uplift.banking;
 
 import org.uplift.account.Account;
 import org.uplift.account.Transaction;
+import org.uplift.banking.security.OtpManager;
 import org.uplift.exception.InsufficientBalanceException;
+import org.uplift.exception.InvalidOtpException;
+import org.uplift.exception.OtpExpiredException;
+
 import java.util.*;
 
 public class TransactionManager {
     private Random random;
     private AccountManager accountManager;
+    private OtpManager otpManager;
     private Set<Transaction> transactionHistory=new HashSet<>();
 
     public void setRandom(Random random) {
@@ -32,7 +37,10 @@ public class TransactionManager {
     }
 
     public Transaction makePayment(String source,TransferType sourceType,String target,TransferType targetType,double amount)
-    throws InsufficientBalanceException{
+            throws InsufficientBalanceException, OtpExpiredException, InvalidOtpException {
+        if(!otpManager.validateOtp()) {
+            throw new InvalidOtpException("Otp entered is incorrect.Request to try again after 24 hours");
+        }
         Account sourceAccount= findAccount(source, sourceType);
         Account targetAccount=findAccount(target,targetType);
         return transfer(sourceAccount,targetAccount,amount);

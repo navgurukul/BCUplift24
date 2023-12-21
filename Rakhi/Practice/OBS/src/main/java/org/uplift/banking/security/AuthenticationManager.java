@@ -1,6 +1,4 @@
-package org.uplift.bank.security;
-
-import org.uplift.bank.AccountManager;
+package org.uplift.banking.security;
 
 public class AuthenticationManager {
 //    private AccountManager bank;
