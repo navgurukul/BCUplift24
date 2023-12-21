@@ -3,7 +3,7 @@ package org.uplift.uplift.account;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.uplift.account.SavingAccount;
-import org.uplift.user.user.User;
+import org.uplift.user.User;
 import org.uplift.uplifte.exceptionhandling.InsufficientBalanceException;
 
 

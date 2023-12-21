@@ -1,6 +1,6 @@
 package org.uplift.account;
 
-import org.uplift.user.user.User;
+import org.uplift.user.User;
 import org.uplift.uplifte.exceptionhandling.InsufficientBalanceException;
 
 import java.util.Date;
@@ -40,4 +40,5 @@ public class SavingAccount implements  Account {
         return balance -= amount;
 
     }
+
 }

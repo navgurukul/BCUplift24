@@ -1,4 +1,4 @@
-package org.uplift.user.user;
+package org.uplift.user;
 
 public class User {
     private String name;
