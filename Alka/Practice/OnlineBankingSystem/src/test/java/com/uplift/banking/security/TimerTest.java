@@ -1,4 +1,4 @@
-package com.uplift.bank.security;
+package com.uplift.banking.security;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

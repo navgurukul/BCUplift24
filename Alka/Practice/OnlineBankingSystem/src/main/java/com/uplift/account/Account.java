@@ -8,5 +8,10 @@ public interface Account {
 
     public double withdraw(double amount) throws InsufficietBalanceException;
 
+    public String getAccountNumber();
+
+    public String getPhoneNumber();
+
+    public String getUserName();
 
 }

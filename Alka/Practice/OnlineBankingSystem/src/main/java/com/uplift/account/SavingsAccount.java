@@ -4,9 +4,11 @@ import com.uplift.exceptions.InsufficietBalanceException;
 import com.uplift.user.User;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class SavingsAccount implements Account{
     private User user;
+
     private String accountNumber;
 
     private double balance;
@@ -22,6 +24,10 @@ public class SavingsAccount implements Account{
         this.openingDate =date;
         this.accountNumber=accountNumber;
         this.overdraftLimit=overdraftLimit;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
 
@@ -43,5 +49,27 @@ public class SavingsAccount implements Account{
         }
         balance-=amount;
         return balance;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SavingsAccount that = (SavingsAccount) o;
+        return Double.compare(balance, that.balance) == 0 && Double.compare(overdraftLimit, that.overdraftLimit) == 0 && Objects.equals(user, that.user) && Objects.equals(accountNumber, that.accountNumber) && Objects.equals(openingDate, that.openingDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(user, accountNumber, balance, overdraftLimit, openingDate);
+    }
+
+
+    public  String getPhoneNumber(){
+        return user.getMobile();
+    }
+
+    public  String getUserName(){
+        return user.getUserName();
     }
 }

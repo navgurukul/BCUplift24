@@ -1,4 +1,4 @@
-package com.uplift.bank.security;
+package com.uplift.banking.security;
 import com.uplift.exceptions.OtpExpiredException;
 import java.util.Random;
 import java.util.Scanner;
