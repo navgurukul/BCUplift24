@@ -32,24 +32,21 @@ class SavingsAccountTest {
     }
 
     @Test
- //   @org.junit.jupiter.api.Test
     void deposit() {
         double amount =1000;
         double expected=ACCOUNT_BALANCE +amount;
         assertEquals(expected,sa.deposit(amount));
 
     }
-
     @Test
- //   @org.junit.jupiter.api.Test
+
     void withdraw() throws InsufficientBalanceException {
        double amount=1000;
         double expectedBalance=ACCOUNT_BALANCE -amount;
-        assertEquals(OD_LIMIT,sa.withdraw(amount));
+        assertEquals(expectedBalance,sa.withdraw(amount));
     }
     @Test
     void withdrawWithOverDraftLimit() throws InsufficientBalanceException {
-       //double expectedBalance=ACCOUNT_BALANCE -500;
        assertEquals(OD_LIMIT,sa.withdraw(ACCOUNT_BALANCE+500));
 
     }
