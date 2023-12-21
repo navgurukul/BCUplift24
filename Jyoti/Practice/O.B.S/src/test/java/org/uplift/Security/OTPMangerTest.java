@@ -1,4 +1,4 @@
-package org.uplift.OTPManager;
+package org.uplift.Security;
 import org.junit.jupiter.api.*;
 import org.mockito.*;
 import org.uplift.exception.OtpExpiredException;
@@ -19,6 +19,7 @@ class OtpManagerTest {
     void setUp(){
         MockitoAnnotations.openMocks(this);
     }
+
     @Test
     void generateOtp(){
         when((random.nextInt(1000, 100000))).thenReturn(1000);
@@ -36,16 +37,19 @@ class OtpManagerTest {
         io.verify(random).nextInt(1000,100000);
         io.verify(scanner).next();
     }
+
     @Test
-    void validateOtpMaxRetries() throws OtpExpiredException{
+    void validateOtpMaxRetries() throws OtpExpiredException {
         assertFalse(otpManager.validateOtp());
         verify(scanner, times(3)).next();
         verify(random, times(1)).nextInt(1000, 100000);
     }
+
     @Test
     void validateOtpTimeOut(){
-        when(timer.getCurrentTime()).thenReturn(100l,70000l);
-        assertThrows(OtpExpiredException.class, () -> otpManager.validateOtp());
-
+        when(timer.getCurrentTime()).thenReturn(1001L,7000001L);
+        assertThrows(OtpExpiredException.class,()->otpManager.validateOtp());
     }
+
+
 }

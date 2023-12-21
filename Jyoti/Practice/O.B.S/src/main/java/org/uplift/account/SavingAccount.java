@@ -1,12 +1,10 @@
 package org.uplift.account;
 
-import org.uplift.account.Account;
 import org.uplift.exception.InsufficientBalanceException;
 import org.uplift.user.User;
-
 import java.util.Date;
 
-public class SavingAccount implements Account {
+public class SavingAccount implements  Account {
     private String accountNumber;
     private String name;
     private double balance;
@@ -40,5 +38,13 @@ public class SavingAccount implements Account {
         }
         return balance -= amount;
 
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public User getUser() {
+        return user;
     }
 }

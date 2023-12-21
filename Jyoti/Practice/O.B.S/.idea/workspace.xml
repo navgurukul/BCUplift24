@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66b64fef-de62-4c66-9a27-331f9686a4d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/OTPManager/OTPManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/OTPManager/Timer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/exception/OtpExpiredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/OTPManager/OTPMangerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/OTPManager/TimerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Bank/AccountManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Bank/TransactionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Bank/TransferType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/Bank/AccountManagerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/OTPManager/OTPManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/Security/OTPManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/OTPManager/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/Security/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Bank/TransactionManger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/SavingAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/SavingAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/account/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/main/java/org/uplift/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/OTPManager/OTPMangerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/Security/OTPMangerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/OTPManager/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/Security/TimerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/Bank/TransactionMangerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../O.B.S/src/test/java/org/uplift/account/Bank/TransactionMangerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -69,8 +79,8 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
-      <recent name="org.uplift.OTPManager" />
       <recent name="org.uplift.account.Bank" />
+      <recent name="org.uplift.OTPManager" />
       <recent name="org.uplift.account" />
     </key>
   </component>
@@ -79,7 +89,7 @@
       <module name="O.B.S." />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="PATTERN" value="org.uplift.Security.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,7 +105,7 @@
       <module name="O.B.S." />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="PATTERN" value="org.uplift.Security.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,7 +121,7 @@
       <module name="O.B.S." />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="PATTERN" value="org.uplift.Security.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +137,12 @@
       <module name="O.B.S." />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.uplift.OTPManager.*" />
+          <option name="PATTERN" value="org.uplift.Security.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.uplift.OTPManager" />
-      <option name="MAIN_CLASS_NAME" value="org.uplift.OTPManager.OtpManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.Security.OtpManagerTest" />
       <option name="METHOD_NAME" value="validateOtp" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
