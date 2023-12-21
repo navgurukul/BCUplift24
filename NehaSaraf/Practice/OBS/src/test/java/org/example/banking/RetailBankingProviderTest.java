@@ -9,6 +9,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.util.Scanner;
+
 import static org.mockito.Mockito.*;
 
 class RetailBankingProviderTest {
@@ -16,6 +18,8 @@ class RetailBankingProviderTest {
     public static final String USERNAME = "abcdef";
     @Mock
     private TransactionManager transactionManager;
+    @Mock
+    private Scanner scanner;
     @InjectMocks
     private RetailBankingProvider retailBankingProvider;
     @BeforeEach
@@ -35,5 +39,10 @@ class RetailBankingProviderTest {
     void testMakePaymentHandlesOtpException()throws Exception{
         when(transactionManager.makePayment(SOURCE_ID,TransferType.ACCOUNT_NUMBER,
                 USERNAME,TransferType.USER_NAME,3456)).thenThrow(OTPExpiredException.class);
+        when(scanner.next()).thenReturn(Attempt.YES.toString());
+        retailBankingProvider.makePayment(SOURCE_ID,TransferType.ACCOUNT_NUMBER,
+                USERNAME,TransferType.USER_NAME,3456);
+        verify(transactionManager,atLeast(2)).makePayment(SOURCE_ID,TransferType.ACCOUNT_NUMBER,
+                USERNAME,TransferType.USER_NAME,3456);
     }
 }
