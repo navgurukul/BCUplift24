@@ -46,4 +46,12 @@ public class SavingAccount implements Account{
                 ", openingDate=" + openingDate +
                 '}';
     }
+    @Override
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

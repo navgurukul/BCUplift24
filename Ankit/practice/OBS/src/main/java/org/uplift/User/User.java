@@ -25,4 +25,12 @@ public class User {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
 }
