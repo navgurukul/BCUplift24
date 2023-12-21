@@ -2,7 +2,7 @@
         Design and implement an online banking system
         with features like account management, fund transfer,
         transaction history, and security measures like
-        OTP verification or two-factor authentication.
+        OTP verification or two-factor authentication.
 */
 package org.uplift;
 

@@ -1,6 +1,6 @@
 package org.uplift.account;
 
-import org.uplift.exceotion.InsufficientBalanceException;
+import org.uplift.exception.InsufficientBalanceException;
 import org.uplift.user.User;
 
 import java.util.Date;

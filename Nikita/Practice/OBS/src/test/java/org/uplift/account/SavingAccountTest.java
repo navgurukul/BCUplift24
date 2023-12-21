@@ -2,7 +2,7 @@ package org.uplift.account;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.uplift.exceotion.InsufficientBalanceException;
+import org.uplift.exception.InsufficientBalanceException;
 import org.uplift.user.User;
 
 import java.util.Date;
