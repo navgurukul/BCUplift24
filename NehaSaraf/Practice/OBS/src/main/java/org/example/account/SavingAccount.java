@@ -1,5 +1,6 @@
 package org.example.account;
 
+import org.example.exception.InsufficientBalanceException;
 import org.example.user.User;
 
 import java.util.Date;

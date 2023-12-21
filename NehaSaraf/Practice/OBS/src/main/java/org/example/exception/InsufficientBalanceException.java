@@ -1,7 +1,7 @@
-package org.example.account;
+package org.example.exception;
 
 public class InsufficientBalanceException extends Exception {
-    InsufficientBalanceException(String message){
+    public InsufficientBalanceException(String message){
         super(message);
     }
 }

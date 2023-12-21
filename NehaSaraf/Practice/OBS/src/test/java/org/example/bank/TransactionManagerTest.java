@@ -1,7 +1,7 @@
 package org.example.bank;
 
 import org.example.account.Account;
-import org.example.account.InsufficientBalanceException;
+import org.example.exception.InsufficientBalanceException;
 import org.example.account.SavingAccount;
 import org.example.account.Transaction;
 import org.example.user.User;
