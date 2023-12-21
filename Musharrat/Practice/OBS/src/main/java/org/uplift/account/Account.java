@@ -9,4 +9,5 @@ public interface Account {
     public double withdraw(double amount) throws InsufficientAccountBalanceException;
 
     public User getUser();
+    public String getAccountNo();
 }

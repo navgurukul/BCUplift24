@@ -47,4 +47,9 @@ public class SavingsAccount implements Account{
     public User getUser() {
         return user;
     }
+
+    @Override
+    public String getAccountNo() {
+        return accountNumber;
+    }
 }

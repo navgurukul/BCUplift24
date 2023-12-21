@@ -20,30 +20,18 @@ import static org.mockito.Mockito.*;
 
 class TransactionManagerTest {
 
-    private Account source;
-    private Account target;
-    private User sourceUser;
-    private User targetUser;
     @Mock
     private Random random;
+
+    @Mock
+    private AccountManager accountManager;
 
     @InjectMocks
     private TransactionManager tm;
 
-
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        sourceUser = new User("user1", "938752094", "us@gmail.com",
-                "use12", "1234");
-        targetUser = new User("user2", "25987433", "us2@gmail.com",
-                "us23", "7800");
-
-        source = new SavingsAccount(sourceUser, "123523", 100000,
-                new Date(), 5000);
-
-        target = new SavingsAccount(targetUser, "0987634", 200000,
-                new Date(), 5000);
     }
 
     @Test
@@ -68,5 +56,20 @@ class TransactionManagerTest {
 
         assertEquals(t, tm.findByTransactionId(""+randomNumber));
 
+    }
+
+    @Test
+    void makePayment() throws InsufficientAccountBalanceException {
+        int randomNumber = 10000001;
+        when(random.nextInt(100000, 1000000000)).thenReturn(randomNumber);
+
+        Account sa = mock(SavingsAccount.class);
+        Account ta = mock(SavingsAccount.class);
+
+        when(accountManager.findByAccountNumber("a1234")).thenReturn(sa);
+        when(accountManager.findByPhoneNumber("+91-582430953")).thenReturn(ta);
+
+        assertEquals(""+randomNumber, tm.makePayment("a1234", TransferType.ACCOUNT_ID,
+                "+91-582430953", TransferType.MOBILE, 4769.49).getId());
     }
 }
