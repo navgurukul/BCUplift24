@@ -7,9 +7,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.uplift.bank.security.OtpManager;
+import org.uplift.bank.security.Timer;
 import org.uplift.exception.OtpExpiredException;
 
-import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
