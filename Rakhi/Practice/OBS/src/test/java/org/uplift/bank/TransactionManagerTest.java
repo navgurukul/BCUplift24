@@ -10,15 +10,11 @@ import org.uplift.account.Account;
 import org.uplift.account.SavingsAccount;
 import org.uplift.account.Transaction;
 import org.uplift.exception.InsufficientBalanceException;
-import org.uplift.user.User;
 
-import java.util.Date;
 import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.uplift.bank.TransferType.ACCOUNT_ID;
-import static org.uplift.bank.TransferType.MOBILE;
 
 class TransactionManagerTest {
     @Mock
