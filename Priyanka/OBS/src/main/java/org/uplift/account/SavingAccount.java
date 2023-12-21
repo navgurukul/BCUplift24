@@ -40,4 +40,12 @@ public class SavingAccount implements Account {
         balance -= amount;
         return balance;
     }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }
