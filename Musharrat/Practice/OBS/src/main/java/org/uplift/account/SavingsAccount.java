@@ -20,6 +20,8 @@ public class SavingsAccount implements Account{
         this.overdraftLimit = overdraftLimit;
     }
 
+
+
     @Override
     public double showBalance() {
         return balance;
@@ -39,5 +41,10 @@ public class SavingsAccount implements Account{
         }
         this.balance -= amount;
         return balance;
+    }
+
+    @Override
+    public User getUser() {
+        return user;
     }
 }
