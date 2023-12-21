@@ -38,4 +38,13 @@ public class SavingAccount implements Account {
         balance = balance - amount;
         return balance;
     }
+
+    @Override
+    public String getAccountNumber() {
+        return accountnumber;
+    }
+
+    public User getUser() {
+        return user;
+    }
 }

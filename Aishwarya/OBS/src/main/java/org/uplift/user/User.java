@@ -19,6 +19,14 @@ public class User {
         this.password = password;
     }
 
+    public String getMobile(){
+        return mobile;
+    }
+
+    public String getUsername(){
+        return username;
+    }
+
 
 }
 

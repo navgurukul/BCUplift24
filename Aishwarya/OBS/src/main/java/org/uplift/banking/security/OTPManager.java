@@ -1,6 +1,5 @@
-package org.uplift.bank.security;
+package org.uplift.banking.security;
 
-import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,7 +19,8 @@ public class OTPManager {
         return otp;
     }
 
-    public boolean validateOtp(){
+    public boolean validateOtp() throws OtpExpiredException{
+
         long startTime = timer.getCurrentTime();
         String generateOtp = generateOTP();
         int counter = 0;
@@ -28,10 +28,11 @@ public class OTPManager {
         do{
             System.out.println("Please input otp");
             String inputOtp = scanner.next();
-            long endtime = timer.getCurrentTime();
-            if(generateOtp.equals(inputOtp)) {
-                throw new OtpExpiredException("expired as try again");
+            long inputTime = timer.getCurrentTime();
+            if(inputTime - startTime > 60000) {
+                throw new OtpExpiredException("Expired as try again");
             }
+            if(generateOtp.equals( inputOtp )) return true;
             System.err.println("Invalid Input. Tries left " + (3-counter-1));
             counter++;
         }while(counter < 3);
