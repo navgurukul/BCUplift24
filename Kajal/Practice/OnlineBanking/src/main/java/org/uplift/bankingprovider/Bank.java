@@ -1,4 +1,4 @@
-package org.uplift.bank;
+package org.uplift.bankingprovider;
 
 import org.uplift.user.User;
 

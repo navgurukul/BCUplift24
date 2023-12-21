@@ -1,8 +1,8 @@
-package org.uplift.bank;
+package org.uplift.bankingprovider;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.uplift.bank.security.Timer;
+import org.uplift.bankingprovider.security.Timer;
 
 import java.util.Date;
 

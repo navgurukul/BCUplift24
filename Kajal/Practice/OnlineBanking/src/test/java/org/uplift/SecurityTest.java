@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.uplift.bank.security.Security;
+import org.uplift.bankingprovider.security.Security;
 import org.uplift.exception.UserDoesNotExistException;
 
 import java.util.Random;
