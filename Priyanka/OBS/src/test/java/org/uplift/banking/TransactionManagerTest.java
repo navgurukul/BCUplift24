@@ -47,8 +47,8 @@ class TransactionManagerTest {
     }
     @Test
     void transfer() throws InsufficientBalanceException {
-        Account sa = mock(SavingAccount.class);
-        Account ta = mock(SavingAccount.class);
+        //Account sa = mock(SavingAccount.class);
+        //Account ta = mock(SavingAccount.class);
         InOrder in = inOrder(sa,ta);
         Transaction t = tm.transfer(sa,ta,1000);
         verify(sa,times(1)).withdraw(1000);
