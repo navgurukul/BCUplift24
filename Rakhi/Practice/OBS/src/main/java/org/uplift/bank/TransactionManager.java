@@ -22,9 +22,12 @@ public class TransactionManager {
     }
 
     public Transaction findByTransactionId(String txnId){
-        for(Transaction t:transactionHistory){
-            if(t.getId().equals(txnId)) return t;
-        }return null;
+//        for(Transaction t:transactionHistory){
+//            if(t.getId().equals(txnId)) return t;
+//        }return null;
+//
+        return transactionHistory.stream().filter(transaction->transaction.getId().equals(txnId))
+                .findFirst().orElse(null);
     }
 
 

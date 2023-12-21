@@ -39,4 +39,14 @@ public class SavingsAccount implements Account{
     public double showBalance() {
         return balance;
     }
+
+    @Override
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    @Override
+    public User getUser() {
+        return user;
+    }
 }
