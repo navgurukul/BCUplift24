@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1310d3ce-8c9e-4f34-8cf2-ba5f5dc49ea0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/uplift/bank/TransactionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/uplift/exception/OtpExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/uplift/security/OTPManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/uplift/security/Timer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/uplift/bank/OTPManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/uplift/bank/OtpExpiredException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/uplift/bank/TimerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/uplift/bank/TransactionManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/uplift/account/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uplift/account/Transaction.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2ZnrjtGvNS79oxn8Sf4mohWTJDP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "gayatri-obs",
+    "onboarding.tips.debug.path": "C:/Users/Win 10/Desktop/BCUplift/BCUplift24/Gayatri/Practies/obs/src/main/java/org/example/Main.java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.uplift.bank" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.uplift.exception" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.uplift.bank" />
+      <recent name="org.uplift.account" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.OTPManagerTest.validateOtpTimeout">
+    <configuration name="OTPManagerTest.generateOtp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.bank" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.bank.OTPManagerTest" />
+      <option name="METHOD_NAME" value="generateOtp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OTPManagerTest.testValidateOtpMaxRetries" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.bank" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.bank.OTPManagerTest" />
+      <option name="METHOD_NAME" value="testValidateOtpMaxRetries" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OTPManagerTest.validateOtp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.bank" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.bank.OTPManagerTest" />
+      <option name="METHOD_NAME" value="validateOtp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OTPManagerTest.validateOtpTimeout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.bank.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.bank" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.bank.OTPManagerTest" />
+      <option name="METHOD_NAME" value="validateOtpTimeout" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TimerTest.getCurrentTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="obs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.exception.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.bank" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.bank.TimerTest" />
+      <option name="METHOD_NAME" value="getCurrentTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OTPManagerTest.validateOtpTimeout" />
+        <item itemvalue="JUnit.OTPManagerTest.validateOtp" />
+        <item itemvalue="JUnit.TimerTest.getCurrentTime" />
+        <item itemvalue="JUnit.OTPManagerTest.generateOtp" />
+        <item itemvalue="JUnit.OTPManagerTest.testValidateOtpMaxRetries" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1310d3ce-8c9e-4f34-8cf2-ba5f5dc49ea0" name="Changes" comment="" />
+      <created>1703068826421</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703068826421</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/uplift/Main.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
