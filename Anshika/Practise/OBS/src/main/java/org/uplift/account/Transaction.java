@@ -1,4 +1,4 @@
-package org.example.account;
+package org.uplift.account;
 
 import java.util.Date;
 import java.util.Objects;

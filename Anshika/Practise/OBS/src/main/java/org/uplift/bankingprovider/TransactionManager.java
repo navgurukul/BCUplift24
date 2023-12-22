@@ -1,11 +1,11 @@
-package org.example.bankingprovider;
+package org.uplift.bankingprovider;
 
-import org.example.account.Account;
-import org.example.account.Transaction;
-import org.example.bankingprovider.security.OtpManager;
-import org.example.exception.InsufficientAccountBalanceException;
-import org.example.exception.InvalidOtpException;
-import org.example.exception.OtpExpiredException;
+import org.uplift.account.Account;
+import org.uplift.account.Transaction;
+import org.uplift.bankingprovider.security.OtpManager;
+import org.uplift.exception.InsufficientAccountBalanceException;
+import org.uplift.exception.InvalidOtpException;
+import org.uplift.exception.OtpExpiredException;
 
 import java.util.Date;
 import java.util.HashSet;

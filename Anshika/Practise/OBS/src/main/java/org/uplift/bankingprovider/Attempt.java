@@ -1,4 +1,4 @@
-package org.example.bankingprovider;
+package org.uplift.bankingprovider;
 
 public enum Attempt {
     YES, NO

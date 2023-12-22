@@ -1,4 +1,4 @@
-package org.example.account;
+package org.uplift.account;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -6,8 +6,6 @@ import org.mockito.InOrder;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.uplift.account.Account;
-import org.uplift.account.Transaction;
 import org.uplift.banking.security.OtpManager;
 import org.uplift.exception.InsufficientAccountBalanceException;
 import org.uplift.exception.InvalidOtpException;

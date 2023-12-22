@@ -1,4 +1,4 @@
-package org.example.exception;
+package org.uplift.exception;
 
 public class UserNotFoundException extends Exception {
     public UserNotFoundException(String message) {

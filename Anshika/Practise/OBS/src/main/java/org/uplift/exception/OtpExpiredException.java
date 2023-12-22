@@ -1,4 +1,4 @@
-package org.example.exception;
+package org.uplift.exception;
 
 public class OtpExpiredException extends Exception {
 

@@ -1,7 +1,7 @@
-package org.example.bankingprovider;
+package org.uplift.bankingprovider;
 
 
-import org.example.account.Account;
+import org.uplift.account.Account;
 
 import java.util.HashSet;
 import java.util.Set;

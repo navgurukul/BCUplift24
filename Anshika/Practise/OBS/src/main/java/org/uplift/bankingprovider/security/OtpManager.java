@@ -1,6 +1,6 @@
-package org.example.bankingprovider.security;
+package org.uplift.bankingprovider.security;
 
-import org.example.exception.OtpExpiredException;
+import org.uplift.exception.OtpExpiredException;
 
 import java.util.Random;
 import java.util.Scanner;

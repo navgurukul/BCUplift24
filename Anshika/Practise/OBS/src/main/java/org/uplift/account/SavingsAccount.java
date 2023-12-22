@@ -1,7 +1,7 @@
-package org.example.account;
+package org.uplift.account;
 
-import org.example.exception.InsufficientAccountBalanceException;
-import org.example.user.User;
+import org.uplift.exception.InsufficientAccountBalanceException;
+import org.uplift.user.User;
 
 import java.util.Date;
 
