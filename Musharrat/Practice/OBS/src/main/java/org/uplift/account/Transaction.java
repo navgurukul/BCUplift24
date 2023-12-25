@@ -1,5 +1,7 @@
 package org.uplift.account;
 
+import org.uplift.banking.TransactionManager;
+
 import java.util.Date;
 import java.util.Objects;
 
@@ -27,7 +29,9 @@ public class Transaction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
-        return Double.compare(amount, that.amount) == 0 && Objects.equals(sourceAccount, that.sourceAccount) && Objects.equals(targetAccount, that.targetAccount) && Objects.equals(transactionDate, that.transactionDate) && Objects.equals(id, that.id);
+        return Double.compare(amount, that.amount) == 0 && Objects.equals(sourceAccount, that.sourceAccount) &&
+                Objects.equals(targetAccount, that.targetAccount) &&
+                Objects.equals(transactionDate, that.transactionDate) && Objects.equals(id, that.id);
     }
 
     @Override

@@ -8,7 +8,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.uplift.banking.security.OtpManager;
 import org.uplift.banking.security.Timer;
-import org.uplift.exception.OtpExpireException;
+import org.uplift.exception.OtpExpiredException;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -36,18 +36,23 @@ class OtpManagerTest {
 
     @Test
     void generateOtp(){
-        int randomNumber = 1023;
-        when(random.nextInt(10000, 10000000)).thenReturn(randomNumber);
-        assertEquals(""+randomNumber, otpManager.generateOtp());
+//        int randomNumber = 1023;
+
+        when(random.nextInt(10000, 10000000)).thenReturn(1023);
+
+        assertEquals(""+1023, otpManager.generateOtp());
+
         verify(random, times(1)).nextInt(10000, 10000000);
     }
 
     @Test
-    void validateOtp() throws OtpExpireException {
+    void validateOtp() throws OtpExpiredException {
 
         when(random.nextInt(10000, 10000000)).thenReturn(1000);
         when(scanner.next()).thenReturn("1000");
+
         assertTrue(otpManager.validateOtp());
+
         verify(scanner, times(1)).next();
 
         InOrder io = inOrder(random, scanner);
@@ -56,7 +61,7 @@ class OtpManagerTest {
     }
 
     @Test
-    void testValidateOtpMaxTimes()throws OtpExpireException {
+    void testValidateOtpMaxTimes()throws OtpExpiredException {
         assertFalse(otpManager.validateOtp());
         verify(scanner, times(3)).next();
         verify(random, times(1)).nextInt(10000, 10000000);
@@ -65,7 +70,7 @@ class OtpManagerTest {
     @Test
     void validateOtpTimeout() {
         when(timer.getCurrentTime()).thenReturn(100L, 70000L);
-        assertThrows(OtpExpireException.class, () -> otpManager.validateOtp());
+        assertThrows(OtpExpiredException.class, () -> otpManager.validateOtp());
     }
 
 

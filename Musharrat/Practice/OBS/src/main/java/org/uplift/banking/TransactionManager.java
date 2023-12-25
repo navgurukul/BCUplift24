@@ -5,7 +5,7 @@ import org.uplift.account.Transaction;
 import org.uplift.banking.security.OtpManager;
 import org.uplift.exception.InsufficientAccountBalanceException;
 import org.uplift.exception.InvalidOtpException;
-import org.uplift.exception.OtpExpireException;
+import org.uplift.exception.OtpExpiredException;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -42,7 +42,7 @@ public class TransactionManager {
     }
 
     public Transaction makePayment(String source, TransferType sourceType, String target, TransferType targetType,
-                                   double amount) throws InsufficientAccountBalanceException, OtpExpireException,
+                                   double amount) throws InsufficientAccountBalanceException, OtpExpiredException,
             InvalidOtpException {
 
         if (!otpManager.validateOtp()){

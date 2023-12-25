@@ -11,7 +11,7 @@ import org.uplift.account.Transaction;
 import org.uplift.banking.security.OtpManager;
 import org.uplift.exception.InsufficientAccountBalanceException;
 import org.uplift.exception.InvalidOtpException;
-import org.uplift.exception.OtpExpireException;
+import org.uplift.exception.OtpExpiredException;
 
 
 import java.util.Random;
@@ -42,7 +42,10 @@ class TransactionManagerTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+
+
         when(random.nextInt(100000, 1000000000)).thenReturn(RANDOM_NUMBER);
+
         when(accountManager.findByAccountNumber(ACCOUNT_NUMBER)).thenReturn(sa);
         when(accountManager.findByPhoneNumber(MOBILE_NUMBER)).thenReturn(ta);
     }
@@ -68,7 +71,7 @@ class TransactionManagerTest {
     }
 
     @Test
-    void makePayment() throws InsufficientAccountBalanceException, OtpExpireException, InvalidOtpException {
+    void makePayment() throws InsufficientAccountBalanceException, OtpExpiredException, InvalidOtpException {
 
         when(otpManager.validateOtp()).thenReturn(true);
 
@@ -79,7 +82,7 @@ class TransactionManagerTest {
     }
 
     @Test
-    void makePaymentThrowsInvalidOtpException() throws OtpExpireException {
+    void makePaymentThrowsInvalidOtpException() throws OtpExpiredException {
         when(otpManager.validateOtp()).thenReturn(false);
 
         assertThrows(InvalidOtpException.class, () -> tm.makePayment("a1234", TransferType.ACCOUNT_ID,

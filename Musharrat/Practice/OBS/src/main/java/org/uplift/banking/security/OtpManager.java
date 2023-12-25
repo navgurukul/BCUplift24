@@ -1,6 +1,6 @@
 package org.uplift.banking.security;
 
-import org.uplift.exception.OtpExpireException;
+import org.uplift.exception.OtpExpiredException;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -21,7 +21,8 @@ public class OtpManager {
         return ""+random.nextInt(10000, 10000000);
     }
 
-    public boolean validateOtp() throws OtpExpireException {
+
+    public boolean validateOtp() throws OtpExpiredException {
         long startTime = timer.getCurrentTime();
         String generateOtp = generateOtp();
         int ctr = 0;
@@ -33,8 +34,9 @@ public class OtpManager {
             long inputTime = timer.getCurrentTime();
 
             if (inputTime - startTime > 60000){
-                throw new OtpExpireException("Otp has expired as it was valid for only one minute");
+                throw new OtpExpiredException("Otp has expired as it was valid for only one minute");
             }
+
             if(generateOtp.equals(inputOtp)) return true;
             System.err.println("Invalid otp.Tries left: "+ (3-ctr-1));
             ctr ++;

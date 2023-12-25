@@ -11,6 +11,7 @@ public class SavingsAccount implements Account{
     private double balance;
     private Date openingDate;
     private double overdraftLimit;
+
     public SavingsAccount(User user, String accountNumber, double balance,
                           Date openingDate, double overdraftLimit) {
         this.user = user;
