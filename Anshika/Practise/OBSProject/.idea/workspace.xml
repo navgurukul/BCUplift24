@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eb927b56-6b80-4dda-b9b1-509377086fbe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/uplift/Bank/OtpGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/uplift/Bank/TransactionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/uplift/Bank/TransactionManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/uplift/account/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/uplift/account/SavingsAccount.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2Znsr0Ue7GMi5SanuWQiXnBaMtZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Win 10/Desktop/Practise/BCUplift24/Anshika/Practise/OBSProject/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.uplift.account" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SavingsAccountTest.withdrawWithODLimitBreach">
+    <configuration name="SavingsAccountTest.deposit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OBSProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.account" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.account.SavingsAccountTest" />
+      <option name="METHOD_NAME" value="deposit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SavingsAccountTest.showBalance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OBSProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.account" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.account.SavingsAccountTest" />
+      <option name="METHOD_NAME" value="showBalance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SavingsAccountTest.withdraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OBSProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.account" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.account.SavingsAccountTest" />
+      <option name="METHOD_NAME" value="withdraw" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SavingsAccountTest.withdrawWithODLimitBreach" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="OBSProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.uplift.account.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.uplift.account" />
+      <option name="MAIN_CLASS_NAME" value="org.uplift.account.SavingsAccountTest" />
+      <option name="METHOD_NAME" value="withdrawWithODLimitBreach" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SavingsAccountTest.withdrawWithODLimitBreach" />
+        <item itemvalue="JUnit.SavingsAccountTest.withdraw" />
+        <item itemvalue="JUnit.SavingsAccountTest.deposit" />
+        <item itemvalue="JUnit.SavingsAccountTest.showBalance" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb927b56-6b80-4dda-b9b1-509377086fbe" name="Changes" comment="" />
+      <created>1703069375735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703069375735</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

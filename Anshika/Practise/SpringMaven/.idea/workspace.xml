@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b203d7de-37bb-4d03-b294-c408e52cb7c6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../OBSProject/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../OBSProject/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBSProject/src/main/java/org/uplift/Bank/OtpGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OBSProject/src/main/java/org/uplift/Bank/OtpGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBSProject/src/main/java/org/uplift/Bank/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OBSProject/src/main/java/org/uplift/Bank/TransactionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBSProject/src/main/java/org/uplift/account/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OBSProject/src/main/java/org/uplift/account/SavingsAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../OBSProject/src/test/java/org/uplift/Bank/TransactionManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../OBSProject/src/test/java/org/uplift/Bank/TransactionManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2Zt28X6xNlOtB1pXOypKzdoSdmJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Win 10/Desktop/Practise/BCUplift24/Anshika/Practise/SpringMaven/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b203d7de-37bb-4d03-b294-c408e52cb7c6" name="Changes" comment="" />
+      <created>1703226899125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703226899125</updated>
+    </task>
+    <servers />
+  </component>
+</project>
