@@ -1,7 +1,7 @@
 package org.uplift;
 
-import org.uplift.bankingprovider.security.OtpManager;
-import org.uplift.bankingprovider.security.Timer;
+import org.uplift.banking.security.OtpManager;
+import org.uplift.banking.security.Timer;
 
 import java.util.Random;
 import java.util.Scanner;
