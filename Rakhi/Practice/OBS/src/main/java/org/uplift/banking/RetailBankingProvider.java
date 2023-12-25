@@ -5,18 +5,30 @@ import org.uplift.exception.InsufficientBalanceException;
 import org.uplift.exception.InvalidOtpException;
 import org.uplift.exception.OtpExpiredException;
 
+import java.util.Scanner;
+
 public class RetailBankingProvider implements BankingProvider{
     private TransactionManager tm;
+    private Scanner scanner;
     @Override
-    public Transaction makePayment(String source, TransferType sourceType, String target, TransferType targetType, double amount){
-        try {
-            return tm.makePayment(source,sourceType,target,targetType,amount);
-        } catch (InsufficientBalanceException e) {
-            throw new RuntimeException(e);
-        } catch (OtpExpiredException e) {
-            throw new RuntimeException(e);
-        } catch (InvalidOtpException e) {
-            throw new RuntimeException(e);
-        }
+    public Transaction makePayment(String source, TransferType sourceType,String target, TransferType targetType, double amount) {
+        int ctr = 0;
+        do {
+            try {
+                return tm.makePayment(source, sourceType, target, targetType, amount);
+            } catch (InsufficientBalanceException e) {
+                throw new RuntimeException(e);
+            } catch (OtpExpiredException e) {
+                System.out.println(e.getMessage());
+                System.err.println("Sorry,otp has expired,Would you like to try again? (YES/NO)");
+                String userInput = scanner.next();
+                if (userInput.equals(Attempt.NO.toString())) return null;
+            } catch (InvalidOtpException e) {
+                throw new RuntimeException(e);
+            } finally {
+                ctr++;
+            }
+        }while(ctr<3);
+        return null;
     }
 }

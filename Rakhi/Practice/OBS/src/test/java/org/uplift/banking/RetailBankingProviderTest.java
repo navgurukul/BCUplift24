@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.uplift.exception.OtpExpiredException;
+
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 class RetailBankingProviderTest {
 
@@ -16,6 +18,9 @@ class RetailBankingProviderTest {
     private static final String USER_NAME = "B123";
     @Mock
     TransactionManager tm;
+
+    @Mock
+    Scanner scanner;
 
     @InjectMocks
     RetailBankingProvider rbp;
@@ -32,5 +37,17 @@ class RetailBankingProviderTest {
         verify(tm,times(1))
                 .makePayment(Source_ACCOUNT_NUMBER,TransferType.ACCOUNT_ID,USER_NAME
                         ,TransferType.USERNAME,1000);
+    }
+
+    @Test
+    void makePaymentHandlesOtpExpiration()throws Exception{
+        when(tm.makePayment(Source_ACCOUNT_NUMBER,TransferType.ACCOUNT_ID,
+                USER_NAME,TransferType.USERNAME,1000))
+                .thenThrow(OtpExpiredException.class);
+        when(scanner.next()).thenReturn(Attempt.YES.toString());
+        rbp.makePayment(Source_ACCOUNT_NUMBER,TransferType.ACCOUNT_ID,
+                USER_NAME,TransferType.USERNAME,1000);
+        verify(tm,atLeast(2)).makePayment(Source_ACCOUNT_NUMBER,TransferType.ACCOUNT_ID,
+                USER_NAME,TransferType.USERNAME,1000);
     }
 }

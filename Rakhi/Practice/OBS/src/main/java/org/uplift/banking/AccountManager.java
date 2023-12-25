@@ -22,7 +22,8 @@ public class AccountManager {
     }
 
     public Account findByUserName(String userName){
-        return userAccount.stream().filter(account -> account.getUser().getUserName().equals(userName))
+        return userAccount.stream().filter(account -> account.getUser().getUserName().equals(userName
+                ))
                 .findFirst().orElse(null);
     }
 }

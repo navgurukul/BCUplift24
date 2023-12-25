@@ -76,6 +76,7 @@ class TransactionManagerTest {
     }
 
 
+
     @Test
     void makePayment() throws InsufficientBalanceException, OtpExpiredException, InvalidOtpException {
         when(otpManager.validateOtp()).thenReturn(true);
@@ -89,6 +90,7 @@ class TransactionManagerTest {
     @Test
     void makePaymentThrowsInvalidException()throws OtpExpiredException{
         when(otpManager.validateOtp()).thenReturn(false);
+
         assertThrows(InvalidOtpException.class,()->transactionManager.makePayment("A123", TransferType.ACCOUNT_ID,"123456",
                 TransferType.MOBILE,10000.0).getId());
     }
