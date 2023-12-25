@@ -1,4 +1,4 @@
-package org.uplift.exceptions;
+package org.uplift.bank;
 
 public class OTPExpiredException extends Exception {
     public OTPExpiredException(String massege){

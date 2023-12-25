@@ -31,9 +31,9 @@ public class User {
         return userName;
     }
 
-    public String getPassword() {
-        return password;
-    }
+//    public String getPassword() {
+//        return password;
+//    }
 
     @Override
     public String toString() {

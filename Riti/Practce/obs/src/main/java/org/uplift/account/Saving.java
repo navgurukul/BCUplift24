@@ -10,12 +10,15 @@ public class Saving implements Account{
     private Date openingDate;
     private  double balance;
     private String accountNumber;
+    private User user;
+
 
     public Saving(User user, String accountNumber, double balace, Date openingDate, double overdraftLimit) {
         this.accountNumber=accountNumber;
         this.balance=balace;
         this.openingDate = openingDate;
         this.overdraftLimit=overdraftLimit;
+        this.user=user;
     }
 
     @Override
@@ -46,11 +49,20 @@ public class Saving implements Account{
         return balance;
     }
 
-    public String getAccountNumber() {
-        return accountNumber;
-    }
 
     public double getOverdraftLimit() {
         return overdraftLimit;
+    }
+    public String getUserName(){
+        return user.getUserName();
+    }
+    public String getMobileNumber(){
+        return  user.getPhone();
+    }
+    public String getAccountNumber(){
+        return  accountNumber;
+    }
+    public User getUser(){
+        return user;
     }
 }

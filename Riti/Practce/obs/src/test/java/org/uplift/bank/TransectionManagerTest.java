@@ -1,70 +1,87 @@
 package org.uplift.bank;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InOrder;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.uplift.account.Account;
+import org.uplift.account.AccountManager;
 import org.uplift.account.Saving;
 import org.uplift.account.Transection;
+import org.uplift.bank.OTPExpiredException;
+import org.uplift.bank.TransectionManager;
+import org.uplift.bank.security.OTPManager;
 import org.uplift.exceptions.InsuffucentBalanceException;
+import org.uplift.exceptions.InvalidOTPException;
+import org.uplift.bank.TransferType;
 import org.uplift.user.User;
 
-import java.util.Date;
-import java.util.Objects;
 import java.util.Random;
 
-import static java.lang.String.valueOf;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class TransectionManagerTest {
-    private Account source;
-    private Account target;
 
-    private User sourceUser;
-    private User targetUser;
     @Mock
-    private Random random;
+    private Saving sourceAccount;
+
+    @Mock
+    private Account targetAccount;
+
+    @Mock
+    private AccountManager accountManager;
+
+    @Mock
+    private OTPManager otpManager;
+
     @InjectMocks
     private TransectionManager transectionManager;
-
 
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-//        sourceUser=new User("Riti Sharma","ritisharma@123gmail.com","1234567","riti_sharma","riti@12345");
-//        targetUser= new User("Mayank","mayank@bhardwaj@2001.gmail.com","734237922","mayank_bhardwaj","riti_bhardwaj");
-//        source=new Saving(sourceUser,"xxxx",200000,new Date(),10000);
-//        target=new Saving(targetUser,"yyyy",100000,new Date(),20000);
+        when(accountManager.findByAccountNumber(anyString())).thenReturn(sourceAccount);
+        when(accountManager.findByMobileNumber(anyString())).thenReturn(targetAccount);
 
 
+        transectionManager = new TransectionManager(new Random(), accountManager, otpManager);
     }
 
-    @AfterEach
-    void tearDown() {
-    }
     @Test
     void testTransfer() throws InsuffucentBalanceException {
-        int randomeNumber=1000001;
-        when(random.nextInt(10000000,100000001)).thenReturn(randomeNumber);
-        Account sa=mock(Saving.class);
-        Account ta=mock(Saving.class);
-        InOrder io=inOrder(sa,ta);
-        Transection t=transectionManager.transfer(sa,ta,1000.0);
-        assertEquals(""+randomeNumber,t.getId());;
+        when(sourceAccount.getAccountNumber()).thenReturn("SourceAccount");
+        when(targetAccount.getAccountNumber()).thenReturn("TargetAccount");
 
-       verify(sa,times(1)).withdraw(1000);
-       verify(ta,times(1)).deposit(1000);
+        double amount = 1000.0;
+        Transection t = transectionManager.transfer(sourceAccount, targetAccount, amount);
 
-        //it is diciding the order of mocking
-        io.verify(sa).withdraw(1000);
-        io.verify(ta).deposit(1000);
-        assertEquals(t,transectionManager.findByTransectionId(""+randomeNumber));
-
+        assertNotNull(t.getId());
+        verify(sourceAccount, times(1)).withdraw(amount);
+        verify(targetAccount, times(1)).deposit(amount);
+        assertEquals(t, transectionManager.findByTransectionId(t.getId()));
     }
 
+    @Test
+    void makePayment_ValidOTP_SuccessfulTransaction() throws InsuffucentBalanceException, OTPExpiredException, InvalidOTPException{
+        when(otpManager.validOTP()).thenReturn(true);
+
+        Transection transection = transectionManager.makePayment(
+                "SourceAccountId", TransferType.ACCOUNT_ID, "MobileNumber", TransferType.MOBILE, 2000);
+
+        assertNotNull(transection.getId());
+        verify(otpManager, times(1)).validOTP();
+    }
+
+    @Test
+    void makePayment_InvalidOTP_ThrowsInvalidOTPException() throws InsuffucentBalanceException, OTPExpiredException {
+        when(otpManager.validOTP()).thenReturn(false);
+
+        assertThrows(InvalidOTPException.class, () ->
+                transectionManager.makePayment("SourceAccountId", TransferType.ACCOUNT_ID, "MobileNumber",
+                        TransferType.MOBILE, 2000));
+
+        verify(otpManager, times(1)).validOTP();
+    }
 }

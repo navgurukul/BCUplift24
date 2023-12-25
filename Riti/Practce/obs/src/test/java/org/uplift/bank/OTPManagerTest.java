@@ -9,7 +9,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.uplift.bank.security.OTPManager;
 import org.uplift.bank.security.Timer;
-import org.uplift.exceptions.OTPExpiredException;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -32,17 +31,18 @@ class OTPManagerTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @AfterEach
-    void tearDown() {
-    }
+//    @AfterEach
+//    void tearDown() {
+//    }
 
     @Test
     void generateOTP() {
-        when(random.nextInt(1000,100000)).thenReturn(1000);
-        assertEquals(""+1000, otpManager.generateOTP());
-        verify(random,times(1)).nextInt(1000,100000);
-
+        when(random.nextInt(1000, 100000)).thenReturn(1000); // Make sure the range is consistent
+        assertEquals("1000", otpManager.generateOTP());
+        verify(random, times(1)).nextInt(1000, 100000);
     }
+
+
     @Test
     void testValidateOTP() throws OTPExpiredException {
         when(scanner.next()).thenReturn("1000");
