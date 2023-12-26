@@ -1,0 +1,8 @@
+org\uplift\demo\laptop\Laptop.class
+org\uplift\demo\UpliftController.class
+org\uplift\demo\Repository\StudentRepository.class
+org\uplift\demo\services\StudentService.class
+org\uplift\demo\services\LaptopService.class
+org\uplift\demo\DemoApplication.class
+org\uplift\demo\Repository\LaptopRepository.class
+org\uplift\demo\student\Student.class
