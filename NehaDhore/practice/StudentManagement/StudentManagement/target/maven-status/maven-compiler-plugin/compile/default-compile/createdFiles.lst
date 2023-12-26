@@ -1,0 +1,5 @@
+org\example\StudentManagement\web\StudentController.class
+org\example\StudentManagement\student_repository\StudentRepository.class
+org\example\StudentManagement\student\Student.class
+org\example\StudentManagement\StudentManagementApplication.class
+org\example\StudentManagement\student_service\StudentService.class
