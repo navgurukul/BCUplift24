@@ -1,0 +1,5 @@
+org\example\librarymanagement\service\BookService.class
+org\example\librarymanagement\repository\BookRepository.class
+org\example\librarymanagement\LibraryManagementApplication.class
+org\example\librarymanagement\web\BookController.class
+org\example\librarymanagement\book\Book.class
